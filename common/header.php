@@ -62,14 +62,14 @@
           <?php endif; ?>
 
             <div class="row w-100">
-              <div class="col-sm-12 col-md-4">
+              <div class="col-sm-12 col-lg-4">
                 <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
                 <?php echo link_to_home_page(option('site_title'), array('class'=>'navbar-brand', 'id' => 'site-title')); ?>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
               </div>
-              <div class="col-sm-12 col-md-8 d-flex align-items-center justify-content-around">
+              <div class="col-sm-12 col-lg-8 d-flex align-items-center justify-content-around">
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <?php
                       $partial = array('common/menu-partial.phtml', 'default');
@@ -91,8 +91,7 @@
 
 
                         <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        	 viewBox="0 0 2969.2 333.6" style="enable-background:new 0 0 2969.2 333.6;" xml:space="preserve">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2969.2 333.6" style="enable-background:new 0 0 2969.2 333.6;" xml:space="preserve">
 
                            <style type="text/css">
                            	.st0{fill:none;}
