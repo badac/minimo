@@ -255,11 +255,24 @@ h6 {
     font-family: $font-family-title;
     text-transform: uppercase;
     font-size: $base-font-size * 2;
-    font-weight: bold;
+    font-weight: 700;
     line-height: $base-line-height * 2;
     margin: 20px 0;
+
     //a{text-decoration:none; color:$primary;}
 }
+
+@media screen and (max-width: map-get($grid-breakpoints, "md")){
+  #site-title {
+
+      font-size: $base-font-size;
+      line-height: $base-line-height;
+      //margin: 20px 0;
+      overflow-wrap: break-word;
+  }
+}
+
+
 
 
 /* -------------------------------------------------------------------------*/
