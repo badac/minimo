@@ -63,6 +63,11 @@ gulp.task('build', function () {
         //.pipe(livereload());
 });
 
+gulp.task('icons', function() {
+    return gulp.src('./node_modules/font-awesome/fonts/*')
+        .pipe(gulp.dest('./fonts'));
+});
+
 gulp.task('css', function() {
 
     return gulp.src('./css/sass/*.scss')

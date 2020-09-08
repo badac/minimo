@@ -61,7 +61,6 @@
           <?php else: ?>
             <nav class="navbar navbar-expand-md navbar-light bg-light py-3 fixed-top" >
           <?php endif; ?>
-            <div class="container-fluid">
 
             <div class="row w-100">
               <div class="col-sm-12 col-md-4">
@@ -80,13 +79,12 @@
                       echo $nav->render();
                     ?>
 
-                    <form class="form-inline my-2  mx-5">
-                      <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
-                      <?php echo search_form(array('show_advanced' => true)); ?>
-                      <?php else: ?>
-                      <?php echo search_form(); ?>
-                      <?php endif; ?>
-                    </form>
+                    <button type="button" name="button" class="btn btn-outline" data-toggle="collapse" href="#navbar-search" >
+                      <i class="fa fa-search"></i>
+                    </button>
+
+
+
                     <ul class="logos d-flex justify-content-around align-items-center">
                       <li class="mx-4">
                         <a href="https://badac.uniandes.edu.co" target="_blank">
@@ -537,8 +535,17 @@
                     </ul>
                 </div>
               </div>
+              <div class="col-sm-12 collapse" id="navbar-search">
+                <form class="form-inline my-2  mx-5">
+                  <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
+                  <?php echo search_form(array('show_advanced' => true)); ?>
+                  <?php else: ?>
+                  <?php echo search_form(); ?>
+                  <?php endif; ?>
+                </form>
+              </div>
             </div>
-          </div>
+
                 </nav>
         </header>
         <?php if(get_theme_option('hero') && is_current_url('/') ): ?>
