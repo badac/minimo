@@ -7,7 +7,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -13609,7 +13609,7 @@ footer {
 
 body {
   background-color: #fff;
-  font-family: "Lato", Verdana, Arial, sans-serif;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #444;
@@ -13715,7 +13715,7 @@ blockquote {
 /* -------------------------------------------------------------------------*/
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 36px;
   padding: .5em 0;
@@ -13744,7 +13744,7 @@ h6 {
   font-size: italic; }
 
 #site-title {
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 32px;
   font-weight: bold;
@@ -13769,7 +13769,8 @@ h6 {
 .logos {
   list-style-type: none; }
   .logos li svg {
-    max-width: 180px; }
+    width: 100%;
+    max-width: 260px; }
 
 .navbar-dark #submit_search {
   border-color: #fff;
@@ -14580,7 +14581,7 @@ body.files .item-file {
           .show > #exhibit-pages.full #secondary-nav > li:nth-child(4) a.dropdown-toggle:focus {
             box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5); }
     #exhibit-pages.full #secondary-nav .exhibit-title {
-      font-family: "Raleway", sans-serif;
+      font-family: "Inter", Helvetica, Arial, sans-serif;
       padding: .5em 0; }
       #exhibit-pages.full #secondary-nav .exhibit-title:after {
         content: ":"; }
