@@ -265,7 +265,7 @@ h6 {
 @media screen and (max-width: map-get($grid-breakpoints, "md")){
   #site-title {
 
-      font-size: $base-font-size;
+      font-size: $base-font-size * 1.4;
       line-height: $base-line-height;
       //margin: 20px 0;
       overflow-wrap: break-word;
@@ -290,11 +290,16 @@ h6 {
 /* -------------------------------------------------------------------------*/
 /* General Navigation */
 
+.navbar-brand{
+  white-space: normal;
+}
+
 
 .navbar-nav{
   .nav-link{
-    font-size: $spacer * 1.4;
+    font-size: $spacer * 1.2;
     text-transform: uppercase;
+    padding-left: 0;
   }
 }
 
@@ -304,12 +309,9 @@ h6 {
 
 
 .logos{
-  list-style-type: none;
-  li{
-    svg{
-      width: 100%;
-      max-width: 260px;
-    }
+  svg{
+    width: 260px;
+    max-width: 260px;
   }
 }
 
@@ -319,20 +321,16 @@ h6 {
     color: $white;
   }
   .logos{
-    li{
-
-      a{
-        svg{
-          color: $white;
-          //width: 128px;
-          //.st0, .st1,.st2,.st3,.st4{
-          path{
-            fill: currentColor;
-          }
+    a{
+      svg{
+        color: $white;
+        //width: 128px;
+        //.st0, .st1,.st2,.st3,.st4{
+        path{
+          fill: currentColor;
         }
       }
     }
-
   }
 }
 
@@ -342,7 +340,6 @@ h6 {
     color: $black;
   }
   .logos{
-    li{
       a{
         svg{
           //width: 128px;
@@ -355,8 +352,6 @@ h6 {
 
         }
       }
-    }
-
   }
 }
 

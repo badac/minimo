@@ -1,3 +1,4 @@
+<?php   $options['form_attributes']['class'] = 'form-inline'; ?>
 <?php echo $this->form('search-form', $options['form_attributes']); ?>
   <?php echo $this->formText('query', $filters['query'], array('title' => __('Search'), 'class'=>'form-control')); ?>
   <?php echo $this->formButton('submit_search', $options['submit_value'], array('type' => 'submit', 'class'=>'btn btn-outline-primary')); ?>

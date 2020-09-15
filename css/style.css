@@ -13754,7 +13754,7 @@ h6 {
 
 @media screen and (max-width: 768px) {
   #site-title {
-    font-size: 16px;
+    font-size: 22.4px;
     line-height: 24px;
     overflow-wrap: break-word; } }
 
@@ -13766,35 +13766,37 @@ h6 {
 /* Components */
 /* -------------------------------------------------------------------------*/
 /* General Navigation */
+.navbar-brand {
+  white-space: normal; }
+
 .navbar-nav .nav-link {
-  font-size: 1.4rem;
-  text-transform: uppercase; }
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding-left: 0; }
 
 .navbar-dark, .navbar-light {
   transition: background-color 0.5s ease; }
 
-.logos {
-  list-style-type: none; }
-  .logos li svg {
-    width: 100%;
-    max-width: 260px; }
+.logos svg {
+  width: 260px;
+  max-width: 260px; }
 
 .navbar-dark #submit_search {
   border-color: #fff;
   color: #fff; }
 
-.navbar-dark .logos li a svg {
+.navbar-dark .logos a svg {
   color: #fff; }
-  .navbar-dark .logos li a svg path {
+  .navbar-dark .logos a svg path {
     fill: currentColor; }
 
 .navbar-light #submit_search {
   border-color: #000;
   color: #000; }
 
-.navbar-light .logos li a svg {
+.navbar-light .logos a svg {
   color: #000; }
-  .navbar-light .logos li a svg path {
+  .navbar-light .logos a svg path {
     fill: currentColor; }
 
 /*
