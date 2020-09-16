@@ -6,24 +6,32 @@ echo head(array(
 ?>
 
 <?php if ($exhibitNavOption == 'full'): ?>
-<nav id="exhibit-pages" class="full">
-    <?php echo exhibit_builder_page_nav(); ?>
-</nav>
-<?php endif; ?>
+<div class="row my-5">
+  <nav id="exhibit-pages" class="full">
+      <?php echo exhibit_builder_page_nav(); ?>
+  </nav>
+</div>
 
+<?php endif; ?>
+<div class="row-col my-5">
 <h1><span class="exhibit-page"><?php echo metadata('exhibit_page', 'title'); ?></h1>
+</div>
 
 <?php if (count(exhibit_builder_child_pages()) > 0 && $exhibitNavOption == 'full'): ?>
-<nav id="exhibit-child-pages" class="secondary-nav">
-    <?php echo exhibit_builder_child_page_nav(); ?>
-</nav>
+
+<div class="row- my-4">
+  <nav id="exhibit-child-pages" class="secondary-nav">
+      <?php echo exhibit_builder_child_page_nav(); ?>
+  </nav>
+</div>
+
 <?php endif; ?>
 
 <div id="exhibit-blocks">
     <?php exhibit_builder_render_exhibit_page(); ?>
 </div>
 
-<div id="exhibit-page-navigation">
+<div class="my-4" id="exhibit-page-navigation">
     <?php if ($prevLink = exhibit_builder_link_to_previous_page()): ?>
     <div id="exhibit-nav-prev">
     <?php echo $prevLink; ?>

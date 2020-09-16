@@ -2,18 +2,19 @@
 $pageTitle = __('Browse Collections');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
 ?>
-
-<h1><?php echo $pageTitle; ?> <?php echo __('(%s total)', $total_results); ?></h1>
-<?php echo pagination_links(); ?>
-
-<?php
-$sortLinks[__('Title')] = 'Dublin Core,Title';
-$sortLinks[__('Date Added')] = 'added';
-?>
-<div id="sort-links">
-    <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
+<div class="row-col my-5">
+  <h1><?php echo $pageTitle; ?> <?php echo __('(%s total)', $total_results); ?></h1>
 </div>
-
+<?php echo pagination_links(); ?>
+<div class="row my-5">
+  <?php
+  $sortLinks[__('Title')] = 'Dublin Core,Title';
+  $sortLinks[__('Date Added')] = 'added';
+  ?>
+  <div id="sort-links">
+      <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
+  </div>
+</div>
 
 <div class="row">
   <?php foreach (loop('collections') as $collection): ?>
@@ -43,7 +44,7 @@ $sortLinks[__('Date Added')] = 'added';
         </div>
         <?php endif; ?>
 
-        <?php echo link_to_items_browse(__('View the items in %s', metadata('collection', array('Dublin Core', 'Title'))), array('collection' => metadata('collection', 'id')), array('class' => 'btn btn-outline-primary')); ?>
+        <?php echo link_to_items_browse(__('View', metadata('collection', array('Dublin Core', 'Title'))), array('collection' => metadata('collection', 'id')), array('class' => 'btn btn-outline-primary')); ?>
         <?php fire_plugin_hook('public_collections_browse_each', array('view' => $this, 'collection' => $collection)); ?>
       </div>
     </div>

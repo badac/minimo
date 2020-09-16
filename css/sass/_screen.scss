@@ -1038,6 +1038,14 @@ body.files .item-file {
 /* -------------------------------------------------------------------------*/
 /* Exhibits */
 
+.exhibits.browse{
+  .tags{
+    a{
+      font-weight: bold;
+    }
+  }
+}
+
 #exhibit-pages:not(.full) {
     padding-top:0;
     ul {
@@ -1112,8 +1120,8 @@ body.files .item-file {
             float:left;
             margin:0;
             .current a {
-                background-color: lighten($accent-main, 5%);
-                color:white;
+                //background-color: lighten($accent-main, 5%);
+                //color:white;
             }
             li {
                 padding:0;
@@ -1191,28 +1199,48 @@ body.files .item-file {
     }
 }
 
-#exhibit-page-navigation {
-    clear:both;
-    margin:0;
-    padding:1em 0em;
+// #exhibit-page-navigation {
+//     clear:both;
+//     margin:0;
+//     padding:1em 0em;
+//
+//     #exhibit-nav-next,
+//         #exhibit-nav-prev {
+//             width: 45%;
+//             margin:.5em 0;
+//         }
+//     .current-page {
+//         clear:both;
+//         display:block;
+//         //background-color: $accent-main;
+//         padding:.5em 0;
+//         //color:white;
+//         margin-top:.5em;
+//     }
+//     #exhibit-nav-up {
+//         clear:both;
+//         width:100%;
+//     }
+// }
 
-    #exhibit-nav-next,
-        #exhibit-nav-prev {
-            width: 45%;
-            margin:.5em 0;
-        }
-    .current-page {
-        clear:both;
-        display:block;
-        background-color: $accent-main;
-        padding:.5em 0;
-        color:white;
-        margin-top:.5em;
-    }
-    #exhibit-nav-up {
-        clear:both;
-        width:100%;
-    }
+#exhibit-page-navigation{
+  display: flex;
+  flex-direction: row;
+  #exhibit-nav-prev{
+    order: 1;
+  }
+  #exhibit-nav-next{
+    order: 3;
+  }
+  #exhibit-nav-up{
+    order: 2;
+  }
+    //text-align: center;
+  a{
+    @extend .btn;
+    @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
+  }
+
 }
 /* -------------------------------------------------------------------------*/
 /* Html5MediaPlayer */
