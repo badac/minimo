@@ -61,7 +61,11 @@
 
     <?php endif; ?>
 
-
+    <?php if ($url = metadata('item',array('Item Type Metadata', 'URL'))): ?>
+      <div class="col-sm-12">
+        <a href="<?php echo $url; ?>" target="_blank" class="btn btn-outline-primary">Ver en Biblioteca Nacional</a>
+      </div>
+    <?php endif; ?>
 
     <!-- If the item belongs to a collection, the following creates a link to that collection. -->
   <?php if (metadata('item', 'Collection Name')): ?>
