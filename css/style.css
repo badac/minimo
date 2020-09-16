@@ -15549,6 +15549,19 @@ body.files .item-file {
 /* Navigation */
 footer {
   border-top: 2px solid black; }
+  footer #footer-logos li {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+    footer #footer-logos li a img {
+      max-width: 128px;
+      max-height: 96px; }
+    footer #footer-logos li a img.cyc {
+      max-width: 76px;
+      max-height: 76px; }
 
 .nav-item {
   font-size: 16px; }

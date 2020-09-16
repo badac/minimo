@@ -1256,8 +1256,29 @@ body.files .item-file {
 
 
 
+
 footer{
   border-top: 2px solid black;
+  #footer-logos{
+    li{
+      padding-left: $spacer * 2;
+      padding-right: $spacer * 2;
+      display: flex;
+      align-items: center;
+      a{
+
+        img{
+          max-width: 128px;
+          max-height: 96px;
+        }
+        img.cyc{
+            max-width: 76px;
+            max-height: 76px;
+          }
+      }
+    }
+
+  }
 }
 
 .nav-item{
