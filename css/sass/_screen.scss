@@ -286,6 +286,13 @@ h6 {
 /* -------------------------------------------------------------------------*/
 /* Components */
 
+// Carousel
+
+.carousel-control-prev,
+.carousel-control-next{
+  //color: black;
+  font-size: 2.6rem;
+}
 
 /* -------------------------------------------------------------------------*/
 /* General Navigation */
@@ -830,6 +837,13 @@ th {
 }
 
 .show {
+
+  .carousel-item{
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+  }
 
     #output-format-list {
         margin: 0;

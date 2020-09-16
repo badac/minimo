@@ -1,11 +1,45 @@
+<?php
+  $files = $item->getFiles();
+ ?>
+
+
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')), 'bodyclass' => 'items show')); ?>
 
 <div class="row">
   <div class="col-sm-12">
     <h1 class="my-5 text-center"><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
 
+
     <?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>
-    <?php echo files_for_item(array('imageSize' => 'fullsize', 'imgAttributes' => array('class' => 'img-fluid'),   'linkAttributes' => array('class' => 'd-flex justify-content-center'))); ?>
+
+      <!-- File Carousel -->
+      <div id="files-carousel" class="carousel slide" data-ride="carousel" data-interval="0">
+        <div class="carousel-inner">
+
+          <?php foreach ($files as $index=>$file): ?>
+            <?php if($index == 0): ?>
+              <div class="carousel-item active">
+            <?php else: ?>
+              <div class="carousel-item">
+            <?php endif; ?>
+                <a href="<?php echo record_url($file); ?>" target="_blank">
+                  <img class="img-fluid" src="<?php echo file_display_url($file) ?>" alt="">
+                </a>
+              </div>
+
+          <?php endforeach; ?>
+        </div>
+          <a class="carousel-control-prev" href="#files-carousel" role="button" data-slide="prev">
+            <span class="icon-arrow-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+        <a class="carousel-control-next" href="#files-carousel" role="button" data-slide="next">
+          <span class="icon-arrow-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- End File Carousel -->
     <?php endif; ?>
 
   </div>

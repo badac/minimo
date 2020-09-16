@@ -55,11 +55,19 @@ if (jQuery) {
             });
           }
 
-          // let navbar = $('.navbar');
-          // let pad = navbar.height();
-          // let content = $('#content');
-          // console.log(pad);
-          // padTop(content,pad);
+
+          const navbar_observe = new ResizeObserver(entries=>{
+            let navbar = entries[0];
+            let rect = navbar.contentRect;
+
+            let height = rect.height + 30;
+            let content = $('#content');
+            padTop(content,height);
+            console.log('resize');
+          })
+          navbar_observe.observe(document.querySelector('.navbar'));
+          //console.log(pad);
+
           //
           // navbar.resize(function(e){
           //   console.log('resize');
@@ -67,10 +75,10 @@ if (jQuery) {
           // });
 
         });
-
-
     }(jQuery));
 }
+
+
 
 function padTop(el, padding){
   el.css("padding-top", padding);
