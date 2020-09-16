@@ -308,10 +308,15 @@ h6 {
     font-size: $spacer * 1.2;
     text-transform: uppercase;
     padding-left: 0;
-    font-weight: bolder;
-    color: black;
+    //font-weight: bolder;
+    //color: black;
+    &:hover{
+      font-weight: bolder;
+    }
   }
 }
+
+
 
 .navbar-dark, .navbar-light{
    transition: background-color 0.5s ease;
@@ -330,6 +335,7 @@ h6 {
     border-color: $white;
     color: $white;
   }
+
   .logos{
     a{
       svg{

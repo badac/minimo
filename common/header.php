@@ -124,7 +124,7 @@
         </header>
         <?php if(is_current_url('/') ): ?>
 
-        <div class="jumbotron-fluid hero" style="background-image:url(<?php echo img('sas-header02.jpg'); ?>);">
+        <div class="jumbotron-fluid hero" style="background-image:url(<?php echo img('sas-header03-b.jpg'); ?>);">
         <?php endif; ?>
 
           </div>
