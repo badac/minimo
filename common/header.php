@@ -122,10 +122,15 @@
           </div>
         </nav>
         </header>
+        <div class="jumbotron-fluid hero" style="background-image:url(<?php echo img('sas-header02.jpg'); ?>);">
+
+          </div>
+        <?php /* ?>
         <?php if(get_theme_option('hero') && is_current_url('/') ): ?>
         <div class="jumbotron-fluid hero" style="background-image:url(<?php echo hero_image_path(); ?>);">
         </div>
       <?php endif; ?>
+      <?php */ ?>
 
         <article id="content" role="main" tabindex="-1" class="container">
 
