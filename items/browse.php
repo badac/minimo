@@ -2,20 +2,18 @@
 $pageTitle = __('Browse Items');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 ?>
-<div class="row">
-  <div class="col my-5">
-    <h1><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
-  </div>
+<div class="row-col my-5">
+  <h1><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
 </div>
-<div class="row">
-  <div class="col-sm-12 col-md-6 align-middle">
+<div class="row my-5">
+  <div class="col align-middle">
     <nav class="items-nav navigation secondary-nav">
         <?php echo public_nav_items(); ?>
     </nav>
   </div>
 
   <?php if ($total_results > 0): ?>
-  <div class="col-sm-12 col-md-6">
+  <div class="col">
     <?php
     $sortLinks[__('Title')] = 'Dublin Core,Title';
     $sortLinks[__('Creator')] = 'Dublin Core,Creator';
@@ -30,7 +28,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 
 </div>
 
-<div class="row">
+<div class="row my-5">
   <div class="col-sm-12">
     <?php echo item_search_filters(); ?>
     <?php echo pagination_links(); ?>
@@ -49,7 +47,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
           <?php $date = metadata($item, array('Dublin Core', 'Date')); ?>
 
           <?php if ($date): ?>
-              <h5 class="card-subtitle"><?php echo $date; ?></h5>
+              <h6 class="card-subtitle"><?php echo $date; ?></h6>
           <?php endif; ?>
 
           <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet' => 250))): ?>

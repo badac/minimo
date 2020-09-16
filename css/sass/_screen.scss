@@ -52,7 +52,8 @@
     width: 100%;
     overflow: auto;
     //padding: $spacing-unit;
-    padding-top: 180px;
+    //padding-top: 180px;
+    padding-bottom: $spacer * 3;
 }
 
 .pagination {
@@ -383,22 +384,26 @@ h6 {
     content: " \f0d7";
 }
 
-.secondary-nav,
-    #secondary-nav {
-        margin-bottom: 1em;
-        overflow: auto;
-        ul{
-          flex-direction: row;
-          li {
-              margin-right:10px;
-              display: block;
-              float:left;
-              &.active a {
-                  font-weight: bold;
-              }
+.secondary-nav{
+  .navbar-nav {
+    //#margin-bottom: 1em;
+    //#overflow: auto;
+      display: flex;
+      flex-direction: row;
+      li {
+          margin-right:.8em;
+          //display: block;
+          //float:left;
+          a.nav-link{
+            font-size: 1em;
+            text-transform: none;
+            padding: 0;
           }
-        }
-
+          &.active a {
+              font-weight: bold;
+          }
+      }
+  }
 }
 .browse,
   .tags,

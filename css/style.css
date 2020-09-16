@@ -14171,7 +14171,7 @@ a.text-dark:hover, a.text-dark:focus {
 #content {
   width: 100%;
   overflow: auto;
-  padding-top: 180px; }
+  padding-bottom: 3rem; }
 
 .pagination {
   width: 100%; }
@@ -14414,22 +14414,19 @@ h6 {
 .desc a:after {
   content: " \f0d7"; }
 
-.secondary-nav,
-#secondary-nav {
-  margin-bottom: 1em;
-  overflow: auto; }
-  .secondary-nav ul,
-  #secondary-nav ul {
-    -ms-flex-direction: row;
-        flex-direction: row; }
-    .secondary-nav ul li,
-    #secondary-nav ul li {
-      margin-right: 10px;
-      display: block;
-      float: left; }
-      .secondary-nav ul li.active a,
-      #secondary-nav ul li.active a {
-        font-weight: bold; }
+.secondary-nav .navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row; }
+  .secondary-nav .navbar-nav li {
+    margin-right: .8em; }
+    .secondary-nav .navbar-nav li a.nav-link {
+      font-size: 1em;
+      text-transform: none;
+      padding: 0; }
+    .secondary-nav .navbar-nav li.active a {
+      font-weight: bold; }
 
 .browse .secondary-nav li, .browse #secondary-nav li,
 .tags .secondary-nav li,
