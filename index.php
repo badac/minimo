@@ -11,7 +11,7 @@
   <div id="featured">
     <!-- Featured Item -->
     <div id="featured-item">
-        <h2 class="my-5 border-primary border-bottom"><?php echo __('Featured Items'); ?></h2>
+        <h2 class="my-5 border-primary border-bottom"><?php echo __('Featured Item'); ?></h2>
         <div class="row">
           <?php echo random_featured_items(10); ?>
         </div>
