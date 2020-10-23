@@ -112,7 +112,10 @@
         </div>
       </div>
     </div>
+  <div class="col-sm-12">
+    <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
 
+  </div>
 
   <div class="col-sm-12">
     <nav>
