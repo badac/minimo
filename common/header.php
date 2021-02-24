@@ -74,7 +74,7 @@
                 <div class="col-sm-12 col-md-3 d-flex align-items-center justify-content-md-end justify-content-sm-start logos">
                   <a href="https://badac.uniandes.edu.co" target="_blank">
                     <?php
-                      echo $this->partial('common/logo-partial.svg');
+                      echo $this->partial('common/logo-bnc-badac-uniandes.svg');
                      ?>
                   </a>
                 </div>
