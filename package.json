@@ -3,7 +3,6 @@
   "version": "2.4.0",
   "description": "\"Clean lines, architectural.\"",
   "main": "gulpfile.js",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
@@ -21,7 +20,6 @@
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.3.1",
@@ -49,5 +47,9 @@
   "bugs": {
     "url": "https://github.com/omeka/theme-minimalist/issues"
   },
-  "homepage": "https://github.com/omeka/theme-minimalist#readme"
+  "homepage": "https://github.com/omeka/theme-minimalist#readme",
+  "dependencies": {
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  }
 }

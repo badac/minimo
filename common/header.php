@@ -63,20 +63,38 @@
           <div class="row- w-100">
             <!-- NAVBAR BARRA SUPERIOR -->
             <div class="col-sm-12 pb-4 pb-md-0">
-              <div class="row">
-                <div class="col-sm-12 col-md-9">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-8">
 
                   <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
                   <?php echo link_to_home_page(option('site_title'), array('class'=>'navbar-brand', 'id' => 'site-title')); ?>
 
                 </div>
                 <!-- logo partial -->
-                <div class="col-sm-12 col-md-3 d-flex align-items-center justify-content-md-end justify-content-sm-start logos">
-                  <a href="https://badac.uniandes.edu.co" target="_blank">
-                    <?php
-                      echo $this->partial('common/logo-bnc-badac-uniandes.svg');
-                     ?>
-                  </a>
+                <div class="col-sm-12 col-md-4 logos">
+                  <div class="row">
+                    <div class="col-4">
+                      <a href="https://bibliotecanacional.gov.co/" target="_blank">
+                        <?php
+                          echo $this->partial('common/logo-bnc.svg');
+                         ?>
+                      </a>
+                    </div>
+                    <div class="col-4">
+                      <a href="https://badac.uniandes.edu.co" target="_blank">
+                        <?php
+                          echo $this->partial('common/logo-badac.svg');
+                         ?>
+                      </a>
+                    </div>
+                    <div class="col-4">
+                      <a href="https://uniandes.edu.co" target="_blank">
+                        <?php
+                          echo $this->partial('common/logo-uniandes.svg');
+                         ?>
+                      </a>
+                    </div>
+                  </div>
                 </div>
                 <!-- end logo partial -->
               </div>

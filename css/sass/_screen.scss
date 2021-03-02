@@ -323,12 +323,7 @@ h6 {
 }
 
 
-.logos{
-  svg{
-    width: 260px;
-    max-width: 260px;
-  }
-}
+
 
 .navbar-dark{
   #submit_search{
@@ -339,10 +334,11 @@ h6 {
   .logos{
     a{
       svg{
+        min-width: 100%;
         color: $white;
         //width: 128px;
         //.st0, .st1,.st2,.st3,.st4{
-        path{
+        path, polygon{
           fill: currentColor;
         }
       }
