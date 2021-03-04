@@ -60,10 +60,10 @@ if (jQuery) {
             let navbar = entries[0];
             let rect = navbar.contentRect;
 
-            let height = rect.height + 30;
+            let height = rect.height + 50;
             let content = $('#content');
-            padTop(content,height);
-            console.log('resize');
+            marTop(content,height);
+            console.log('resize: ' + height);
           })
           navbar_observe.observe(document.querySelector('.navbar'));
           //console.log(pad);
@@ -82,4 +82,7 @@ if (jQuery) {
 
 function padTop(el, padding){
   el.css("padding-top", padding);
+}
+function marTop(el, margin){
+  el.css("margin-top", margin);
 }
