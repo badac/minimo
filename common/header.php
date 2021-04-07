@@ -71,7 +71,7 @@
 
                 </div>
                 <!-- logo partial -->
-                <div class="col-4 logos">
+                <div class="col-sm-12 col-md-4 logos">
                   <div class="row align-items-center">
 
                     <div class="col-4 d-flex justify-content-center align-items-center">
@@ -88,7 +88,7 @@
                          ?>
                       </a>
                     </div>
-                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="col-4 d-flex justify-content-center align-items-center">
                       <a href="https://uniandes.edu.co" target="_blank">
                         <?php
                           echo $this->partial('common/logo-uniandes.svg');
