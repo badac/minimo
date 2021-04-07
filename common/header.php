@@ -74,6 +74,13 @@
                 <div class="col-4 logos">
                   <div class="row">
 
+                    <div class="col-4">
+                      <a href="https://badac.uniandes.edu.co" target="_blank">
+                        <?php
+                          echo $this->partial('common/logo-l3a.svg');
+                         ?>
+                      </a>
+                    </div>
                     <div class="col-4 offset-md-3">
                       <a href="https://badac.uniandes.edu.co" target="_blank">
                         <?php
