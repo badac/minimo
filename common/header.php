@@ -72,23 +72,23 @@
                 </div>
                 <!-- logo partial -->
                 <div class="col-4 logos">
-                  <div class="row">
+                  <div class="row align-items-center">
 
-                    <div class="col-4">
+                    <div class="col-4 d-flex justify-content-center align-items-center">
                       <a href="https://badac.uniandes.edu.co" target="_blank">
                         <?php
                           echo $this->partial('common/logo-l3a.svg');
                          ?>
                       </a>
                     </div>
-                    <div class="col-4 offset-md-3">
+                    <div class="col-4 d-flex justify-content-center align-items-center">
                       <a href="https://badac.uniandes.edu.co" target="_blank">
                         <?php
                           echo $this->partial('common/logo-badac.svg');
                          ?>
                       </a>
                     </div>
-                    <div class="col-6 col-md-4">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
                       <a href="https://uniandes.edu.co" target="_blank">
                         <?php
                           echo $this->partial('common/logo-uniandes.svg');

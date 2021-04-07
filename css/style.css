@@ -13180,6 +13180,9 @@ h6 {
 .logos svg {
   width: 100%; }
 
+#logo-l3a {
+  max-width: 100px; }
+
 .navbar-dark #submit_search {
   border-color: #fff;
   color: #fff; }
