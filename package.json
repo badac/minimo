@@ -3,7 +3,9 @@
   "version": "2.4.0",
   "description": "\"Clean lines, architectural.\"",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "lightgallery": "^2.1.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
@@ -21,11 +23,12 @@
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.3.1",
     "linearicons": "^1.0.2",
+    "node-sass": "^6.0.0",
     "popper.js": "^1.14.7",
     "simple-line-icons": "^2.5.5",
     "uglifyify": "^5.0.1",

@@ -66,13 +66,6 @@ if (jQuery) {
             console.log('resize');
           })
           navbar_observe.observe(document.querySelector('.navbar'));
-          //console.log(pad);
-
-          //
-          // navbar.resize(function(e){
-          //   console.log('resize');
-          //   padTop(content, pad)
-          // });
 
         });
     }(jQuery));
