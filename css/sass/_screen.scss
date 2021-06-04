@@ -318,8 +318,9 @@ h6 {
 
 .logos{
   svg{
-    width: 260px;
-    max-width: 260px;
+    width: 100%;
+    //min-width: 200px;
+    //max-width: 260px;
   }
 }
 
@@ -332,9 +333,9 @@ h6 {
     a{
       svg{
         color: $white;
-        //width: 128px;
+        //min-width: 100%;
         //.st0, .st1,.st2,.st3,.st4{
-        path{
+        path, polygon{
           fill: currentColor;
         }
       }
@@ -353,7 +354,7 @@ h6 {
           //width: 128px;
           color: $black;
           //.st0,.st1,.st2,.st3,.st4
-          path
+          path, polygon
           {
             fill: currentColor;
           }

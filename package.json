@@ -28,7 +28,11 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.3.1",
     "linearicons": "^1.0.2",
+<<<<<<< HEAD
     "node-sass": "^6.0.0",
+=======
+    "node-sass": "^5.0.0",
+>>>>>>> 27d5dc07f6b785fc4bd20427934bc1600a6d5815
     "popper.js": "^1.14.7",
     "simple-line-icons": "^2.5.5",
     "uglifyify": "^5.0.1",
