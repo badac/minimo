@@ -842,12 +842,39 @@ th {
     height: auto;
 }
 
+//Item Show
+
+
 .show {
 
-  .carousel-item{
-    img{
-      display: block;
-      margin: 0 auto;
+  .item-viewer{
+    padding: 1rem;
+    background-color: $gray-200;
+    .carousel-item{
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .viewer-options{
+      margin-top: 1rem;
+      .nav-item{
+        margin-left:$spacer;
+        margin-right: $spacer;
+      }
+    }
+    .carousel-indicators{
+      position: relative;
+      z-index: auto;
+      margin-top: 1rem;
+      li{
+        width: 50px;
+        height: auto;
+        img{
+          display: block;
+          max-width: 50px;
+        }
+      }
     }
   }
 

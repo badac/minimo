@@ -66,7 +66,8 @@ if (jQuery) {
             console.log('resize');
           })
           navbar_observe.observe(document.querySelector('.navbar'));
-
+          //inicializa tooltips
+          $('[data-toggle="tooltip"]').tooltip();
         });
     }(jQuery));
 }
