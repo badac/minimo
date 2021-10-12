@@ -13217,18 +13217,23 @@ h6 {
     font-weight: bolder; }
 
 .navbar-nav .dropdown-toggle {
-  padding: 0.5rem 1rem; }
+  padding: 0.5rem 1rem;
+  text-decoration: none; }
+
+.navbar-nav .dropdown {
+  margin-left: 0;
+  margin-top: .5rem; }
 
 .navbar-dark, .navbar-light {
   transition: background-color 0.5s ease; }
 
 .navbar-dark .dropdown-toggle {
-  color: #fff; }
+  color: rgba(255, 255, 255, 0.7); }
 
 .navbar-dark .dropdown-menu .nav-link {
   color: #000; }
   .navbar-dark .dropdown-menu .nav-link:hover {
-    color: rgba(0, 0, 0, 0.8); }
+    color: rgba(0, 0, 0, 0.7); }
 
 .navbar-dark #submit_search {
   border-color: #fff;

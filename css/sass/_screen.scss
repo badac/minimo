@@ -317,6 +317,11 @@ h6 {
   }
   .dropdown-toggle{
     padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+  .dropdown{
+    margin-left: 0;
+    margin-top: .5rem;
   }
 }
 
@@ -331,13 +336,13 @@ h6 {
 
 .navbar-dark{
   .dropdown-toggle{
-    color: $white;
+    color: rgba(255, 255, 255, 0.7);
   }
   .dropdown-menu{
     .nav-link{
       color: $black;
       &:hover{
-        color: rgba(0,0,0,0.8);
+        color: rgba(0,0,0,0.7);
       }
     }
   }
