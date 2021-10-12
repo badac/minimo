@@ -305,7 +305,7 @@ h6 {
 
 
 .navbar-nav{
-  .nav-link{
+  .nav-link, .dropdown-toggle{
     font-size: $spacer * 1.2;
     text-transform: uppercase;
     padding-left: 0;
@@ -314,6 +314,9 @@ h6 {
     &:hover{
       font-weight: bolder;
     }
+  }
+  .dropdown-toggle{
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -327,6 +330,18 @@ h6 {
 
 
 .navbar-dark{
+  .dropdown-toggle{
+    color: $white;
+  }
+  .dropdown-menu{
+    .nav-link{
+      color: $black;
+      &:hover{
+        color: rgba(0,0,0,0.8);
+      }
+    }
+  }
+
   #submit_search{
     border-color: $white;
     color: $white;
@@ -337,7 +352,7 @@ h6 {
       svg{
         min-width: 100%;
         color: $white;
-        //width: 128px;
+        //min-width: 100%;
         //.st0, .st1,.st2,.st3,.st4{
         path, polygon{
           fill: currentColor;
@@ -348,6 +363,10 @@ h6 {
 }
 
 .navbar-light{
+  .dropdown-toggle{
+    color: $black;
+  }
+
   #submit_search{
     border-color: $black;
     color: $black;
@@ -358,7 +377,7 @@ h6 {
           //width: 128px;
           color: $black;
           //.st0,.st1,.st2,.st3,.st4
-          path
+          path, polygon
           {
             fill: currentColor;
           }
@@ -847,12 +866,39 @@ th {
     height: auto;
 }
 
+//Item Show
+
+
 .show {
 
-  .carousel-item{
-    img{
-      display: block;
-      margin: 0 auto;
+  .item-viewer{
+    padding: 1rem;
+    background-color: $gray-200;
+    .carousel-item{
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .viewer-options{
+      margin-top: 1rem;
+      .nav-item{
+        margin-left:$spacer;
+        margin-right: $spacer;
+      }
+    }
+    .carousel-indicators{
+      position: relative;
+      z-index: auto;
+      margin-top: 1rem;
+      li{
+        width: 50px;
+        height: auto;
+        img{
+          display: block;
+          max-width: 50px;
+        }
+      }
     }
   }
 

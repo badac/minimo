@@ -1,55 +1,105 @@
 <?php
   $files = $item->getFiles();
+
+  $lista = array(
+    "uno"=>"1",
+    "dos"=>"2"
+  );
+
+  $tooltip_html = "
+    Esta imagen está licenciada con la licencia Creative Commons 4.0 BY-NC.
+  ";
  ?>
 
 
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')), 'bodyclass' => 'items show')); ?>
 
 <div class="row">
+
+  <!-- item title -->
   <div class="col-sm-12">
     <h1 class="my-5 text-center"><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
-
-
-    <?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>
-
-      <!-- File Carousel -->
-      <div id="files-carousel" class="carousel slide" data-ride="carousel" data-interval="0">
-        <div class="carousel-inner">
-
-          <?php foreach ($files as $index=>$file): ?>
-            <?php if($index == 0): ?>
-              <div class="carousel-item active">
-            <?php else: ?>
-              <div class="carousel-item">
-            <?php endif; ?>
-                <a href="<?php echo record_url($file); ?>" target="_blank">
-                  <img class="img-fluid" src="<?php echo file_display_url($file) ?>" alt="">
-                </a>
-              </div>
-
-          <?php endforeach; ?>
-        </div>
-          <a class="carousel-control-prev" href="#files-carousel" role="button" data-slide="prev">
-            <span class="icon-arrow-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-        <a class="carousel-control-next" href="#files-carousel" role="button" data-slide="next">
-          <span class="icon-arrow-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-      <!-- End File Carousel -->
-    <?php endif; ?>
-
   </div>
+  <!-- end item title -->
 
-    <div class="col-sm-12">
-      <div class="ficha my-4">
-        <h2 class="my-5">Detalles</h2>
-        <?php echo all_element_texts('item'); ?>
+  <!-- Item Viewer --->
+  <?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>
+  <div class="col-sm-12 item-viewer">
+    <!-- File Carousel -->
+    <div class="row-col">
+    <div id="files-carousel" class="carousel slide" data-ride="carousel" data-interval="0">
+      <div class="carousel-inner">
+      <?php foreach ($files as $index=>$file): ?>
+        <?php
+          $active = "";
+          if($index == 0){
+            $active = "active";
+          }
+        ?>
+        <div class="carousel-item <?php echo $active; ?>">
+          <a href="#" data-toggle="modal" data-target="#file-modal-<?php echo $index ?>">
+            <img class="img-fluid" src="<?php echo file_display_url($file); ?>" alt="">
+          </a>
+          <div class="w-100 viewer-options ">
+            <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" data-toggle="tooltip" data-html="true" title="<?php echo $tooltip_html; ?>">
+                  <i class="fa fa-creative-commons" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo file_display_url($file); ?>" download>
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" data-toggle="modal" data-target="#file-modal-<?php echo $index ?>" >
+                  <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <?php endforeach; ?>
+        </div>
       </div>
+      </div>
+      <!-- End File Carousel -->
+        <div class="row">
+
+
+          <!-- carousel thumbnails -->
+          <?php if (sizeof($files) > 1): ?>
+          <div class="col-sm-12">
+              <ol class="carousel-indicators">
+              <?php $clase = "" ?>
+              <?php foreach ($files as $index=>$file): ?>
+                  <?php
+                  if ($index == 0):
+                      $clase = "active";
+                  endif;
+                  ?>
+                  <li data-target="#files-carousel" data-slide-to="<?php echo $index; ?>" class="<?php echo $clase; ?>">
+                    <?php echo file_image('square_thumbnail', array('class' => 'thumbnail'), $file); ?>
+                  </li>
+              <?php endforeach; ?>
+              </ol>
+          </div>
+          <?php endif; ?>
+          <!-- carousel thumbnails -->
+        </div>
+      </div>
+  <?php endif; ?>
+  <!-- Item Viewer --->
+  <!-- Metadata --->
+
+  <div class="col-sm-12">
+    <div class="ficha my-4">
+      <h2 class="my-5">Detalles</h2>
+      <?php echo all_element_texts('item'); ?>
     </div>
+  </div>
     <!-- The following returns all of the files associated with an item. -->
     <?php if ((get_theme_option('Item FileGallery') == 1) && metadata('item', 'has files')): ?>
     <div class="col-sm-12">
@@ -58,7 +108,6 @@
           <div class="element-text"><?php echo files_for_item(); ?></div>
       </div>
     </div>
-
     <?php endif; ?>
 
     <?php if ($url = metadata('item',array('Item Type Metadata', 'URL'))): ?>
@@ -70,7 +119,6 @@
     <!-- If the item belongs to a collection, the following creates a link to that collection. -->
   <?php if (metadata('item', 'Collection Name')): ?>
   <div class="col-sm-12 border-bottom">
-
     <div id="collection" class="element mt-4">
         <h3><?php echo __('Collection'); ?></h3>
         <div class="element-text"><p><?php echo link_to_collection_for_item(); ?></p></div>
@@ -117,6 +165,9 @@
       </div>
     </div>
 
+  <div class="col-sm-12">
+    <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
+  </div>
 
   <div class="col-sm-12">
     <nav>
@@ -126,6 +177,19 @@
       </ul>
     </nav>
   </div>
+
 </div>
 
+
 <?php echo foot(); ?>
+
+<?php
+  foreach($files as $index=>$file){
+    $img_src = file_display_url($file);
+    $object = array(
+      "index"=> $index,
+      "img_src"=> $img_src
+    );
+    echo $this->partial("common/show-item-modal.phtml", $object);
+  }
+?>
