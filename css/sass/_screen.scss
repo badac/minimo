@@ -51,8 +51,7 @@
 #content {
     width: 100%;
     overflow: auto;
-    //padding: $spacing-unit;
-    //padding-top: 180px;
+
     padding-bottom: $spacer * 3;
     padding-top: $spacer * 4;
 }
@@ -148,12 +147,6 @@ body {
 #featured-exhibit,
 #recent-items {
     overflow: hidden;
-    //margin:1em 0 0;
-    h2,
-    h3{
-
-    }
-
 }
 
 #skipnav {
@@ -240,8 +233,6 @@ h1 {
 
 h2 {
     font-size: $base-font-size * 2;
-    //text-transform: capitalize;
-    //border-top: 4px solid $grey-light;
 }
 
 h3 {
@@ -269,7 +260,6 @@ h6 {
 
       font-size: $base-font-size * 1.4;
       line-height: $base-line-height;
-      //margin: 20px 0;
       overflow-wrap: break-word;
   }
 }
@@ -292,7 +282,6 @@ h6 {
 
 .carousel-control-prev,
 .carousel-control-next{
-  //color: black;
   font-size: 2.6rem;
 }
 
@@ -309,8 +298,6 @@ h6 {
     font-size: $spacer * 1.2;
     text-transform: uppercase;
     padding-left: 0;
-    //font-weight: bolder;
-    //color: black;
     &:hover{
       font-weight: bolder;
     }
@@ -347,7 +334,8 @@ h6 {
     }
   }
 
-  #submit_search{
+  .form-control, 
+  .btn{
     border-color: $white;
     color: $white;
   }
@@ -372,16 +360,15 @@ h6 {
     color: $black;
   }
 
-  #submit_search{
+  .form-control, 
+  .btn{
     border-color: $black;
     color: $black;
   }
   .logos{
       a{
         svg{
-          //width: 128px;
           color: $black;
-          //.st0,.st1,.st2,.st3,.st4
           path, polygon
           {
             fill: currentColor;
@@ -391,14 +378,6 @@ h6 {
       }
   }
 }
-
-/*
-.st0{display:none;}
-.st1{fill:#000;}
-.st2{fill:#000;}
-.st3{fill:#000;}
-.st4{fill:#000;}
-*/
 
 .asc a:after,
 .desc a:after {
@@ -415,14 +394,12 @@ h6 {
 
 .secondary-nav{
   .navbar-nav {
-    //#margin-bottom: 1em;
-    //#overflow: auto;
+
       display: flex;
       flex-direction: row;
       li {
           margin-right:.8em;
-          //display: block;
-          //float:left;
+
           a.nav-link{
             font-size: 1em;
             text-transform: none;
@@ -438,8 +415,6 @@ h6 {
   .tags,
   .items {
       .secondary-nav li, #secondary-nav li{
-          //@include line-button;
-          //display: inline-block;
           @extend .btn;
           @include button-outline-variant($primary, $color-hover: $primary, $active-background: color-yiq($primary), $active-border: $primary);
       }
@@ -475,7 +450,6 @@ h6 {
     .pagination_previous a,
     .previous-page a,
     .next-page a {
-        //@include link-button;
         margin-bottom: 0;
         line-height: $base-font-size * 1.5;
         @extend .btn;
@@ -513,9 +487,7 @@ h6 {
 }
 
 .item-pagination {
-    //margin: 0;
-    //padding: 0;
-    //border: 0;
+
     overflow: hidden;
     padding:2em 0 1em 0;
 
@@ -524,16 +496,9 @@ h6 {
       display: inline-block;
       width: auto;
     }
-    /*
-    .next a, .previous a {
-      @extend .btn;
-      @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
-    }
-    */
 }
 
 #sort-links{
-    //margin:0 0 $spacing-unit 0;
     display: flex;
     justify-content: flex-end;
 
@@ -566,8 +531,7 @@ h6 {
 
 #top-nav {
     min-height: 40px;
-/*    position:relative;
-*/    .nav-menu {
+   .nav-menu {
         overflow: auto;
         background-color:lighten($grey-light, 5%);
         .active {
@@ -619,9 +583,7 @@ h6 {
                 border-bottom:1px solid white;
             }
             a:hover {
-                //color:white;
                 text-decoration: none;
-                //background-color:lighten($accent-light, 10%);
             }
         }
         .active a{
@@ -649,7 +611,6 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  //background-color: transparentize($gray-900, .4);
   h1{
     color: white;
 
@@ -672,11 +633,6 @@ h6 {
 /*-- Search--*/
 
 #search-container {
-    #search-form {
-        //position:relative;
-        //height: 1.5 * $base-line-height;
-    }
-
 
     &.with-advanced input[type=text] {
         @include calc(width, "100% - 76px");
@@ -860,7 +816,6 @@ th {
 /* Browse and Item Pages */
 
 #recent-items .item {
-    //border-bottom:1px solid $grey-light;
     margin-bottom: $spacing-unit;
 }
 
@@ -952,11 +907,7 @@ th {
 }
 
 
-.advanced-meta{
-  .advanced-meta-header{
 
-  }
-}
 
 /* -------------------------------------------------------------------------*/
 /* File Pages */
@@ -975,7 +926,6 @@ body.files .item-file {
 .collections {
     .element {
         margin: 0 0 1em 0;
-        //padding: 0;
         clear: none;
     }
 
@@ -991,16 +941,10 @@ body.files .item-file {
     }
     .collection {
         overflow: initial;
-        //@extend h2;
         border-top:none;
     }
 }
 
-.collection .image img,
-.exhibit .image img {
-    //box-shadow: -6px -6px 0 #bbb, -12px -12px 0 #eee;
-    //margin-left: 12px !important;
-}
 
 /* -------------------------------------------------------------------------*/
 /* TagCloud */
@@ -1057,7 +1001,6 @@ body.files .item-file {
     margin-bottom: 1.5em;
     font-style: italic;
     a{
-        //@include link-button;
         @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary)
         display: initial;
     }
@@ -1176,10 +1119,6 @@ body.files .item-file {
             width:100%;
             float:left;
             margin:0;
-            .current a {
-                //background-color: lighten($accent-main, 5%);
-                //color:white;
-            }
             li {
                 padding:0;
                 display:block;
@@ -1256,29 +1195,6 @@ body.files .item-file {
     }
 }
 
-// #exhibit-page-navigation {
-//     clear:both;
-//     margin:0;
-//     padding:1em 0em;
-//
-//     #exhibit-nav-next,
-//         #exhibit-nav-prev {
-//             width: 45%;
-//             margin:.5em 0;
-//         }
-//     .current-page {
-//         clear:both;
-//         display:block;
-//         //background-color: $accent-main;
-//         padding:.5em 0;
-//         //color:white;
-//         margin-top:.5em;
-//     }
-//     #exhibit-nav-up {
-//         clear:both;
-//         width:100%;
-//     }
-// }
 
 #exhibit-page-navigation{
   display: flex;
@@ -1292,7 +1208,6 @@ body.files .item-file {
   #exhibit-nav-up{
     order: 2;
   }
-    //text-align: center;
   a{
     @extend .btn;
     @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
