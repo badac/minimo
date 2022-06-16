@@ -38,7 +38,8 @@
         ?>
         <div class="carousel-item <?php echo $active; ?>">
           <a href="#" data-toggle="modal" data-target="#file-modal-<?php echo $index ?>">
-            <img class="img-fluid" src="<?php echo file_display_url($file); ?>" alt="">
+          <?php echo file_image('square_thumbnail', array('class' => 'img-fluid'), $file); ?>
+          <!--  <img class="img-fluid" src="<?php echo file_display_url($file); ?>" alt="">-->
           </a>
           <div class="w-100 viewer-options ">
             <ul class="nav justify-content-end">
