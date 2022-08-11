@@ -63,7 +63,6 @@
       <!-- End File Carousel -->
         <div class="row">
 
-
           <!-- carousel thumbnails -->
           <?php if (sizeof($files) > 1): ?>
           <div class="col-sm-12">
@@ -83,6 +82,13 @@
           </div>
           <?php endif; ?>
           <!-- carousel thumbnails -->
+        </div>
+        <div class="row justify-content-center my-2">
+                  <div class="col-sm-6">
+                    <p class="disclaimer text-center p-4">
+                    “Las imágenes, ilustraciones y similares, se utilizan sin ánimo de lucro y buena fe para ilustrar lo mencionado por el autor, con fines de enseñanza, difusión cultural y preservación, en la medida estrictamente necesaria para tal fin. Se reconoce el crédito correspondiente a sus autores”.  
+                    </p>
+                  </div>
         </div>
       </div>
   <?php endif; ?>
