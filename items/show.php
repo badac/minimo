@@ -116,8 +116,8 @@
 
   <div class="col-sm-12">
       <h3>Nota de derechos</h3>
-      <p class="disclaimer p-4">
-      “Las imágenes, ilustraciones y similares, se utilizan sin ánimo de lucro y buena fe para ilustrar lo mencionado por el autor, con fines de enseñanza, difusión cultural y preservación, en la medida estrictamente necesaria para tal fin. Se reconoce el crédito correspondiente a sus autores”.  
+      <p class="disclaimer">
+      Las imágenes, ilustraciones y similares, se utilizan sin ánimo de lucro y buena fe para ilustrar lo mencionado por el autor, con fines de enseñanza, difusión cultural y preservación, en la medida estrictamente necesaria para tal fin. Se reconoce el crédito correspondiente a sus autores.
       </p>
     </div>
 
