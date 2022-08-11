@@ -43,11 +43,6 @@
           <div class="w-100 viewer-options ">
             <ul class="nav justify-content-end">
               <li class="nav-item">
-                <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" data-toggle="tooltip" data-html="true" title="<?php echo $tooltip_html; ?>">
-                  <i class="fa fa-creative-commons" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="<?php echo file_display_url($file); ?>" download>
                   <i class="fa fa-download" aria-hidden="true"></i>
                 </a>
