@@ -83,13 +83,7 @@
           <?php endif; ?>
           <!-- carousel thumbnails -->
         </div>
-        <div class="row justify-content-center my-2">
-                  <div class="col-sm-6">
-                    <p class="disclaimer text-center p-4">
-                    “Las imágenes, ilustraciones y similares, se utilizan sin ánimo de lucro y buena fe para ilustrar lo mencionado por el autor, con fines de enseñanza, difusión cultural y preservación, en la medida estrictamente necesaria para tal fin. Se reconoce el crédito correspondiente a sus autores”.  
-                    </p>
-                  </div>
-        </div>
+
       </div>
   <?php endif; ?>
   <!-- Item Viewer --->
@@ -111,7 +105,26 @@
     </div>
     <?php endif; ?>
 
+        <!-- The following prints a list of all tags associated with the item -->
+  <?php if (metadata('item', 'has tags')): ?>
+    <div class="col-sm-12 border-bottom">
+    <div id="item-tags" class="element my-4">
+        <h3><?php echo __('Tags'); ?></h3>
+        <div class="element-text"><?php echo tag_string('item'); ?></div>
+    </div>
+  </div>
 
+  <div class="col-sm-12">
+      <h3>Nota de derechos</h3>
+      <p class="disclaimer p-4">
+      “Las imágenes, ilustraciones y similares, se utilizan sin ánimo de lucro y buena fe para ilustrar lo mencionado por el autor, con fines de enseñanza, difusión cultural y preservación, en la medida estrictamente necesaria para tal fin. Se reconoce el crédito correspondiente a sus autores”.  
+      </p>
+    </div>
+
+  <div class="col-sm-12 border-bottom">
+      <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
+  </div>
+    <?php endif;?>
 
     <!-- If the item belongs to a collection, the following creates a link to that collection. -->
   <?php if (metadata('item', 'Collection Name')): ?>
@@ -123,19 +136,8 @@
   </div>
   <?php endif; ?>
 
-    <!-- The following prints a list of all tags associated with the item -->
-  <?php if (metadata('item', 'has tags')): ?>
-    <div class="col-sm-12 border-bottom">
-    <div id="item-tags" class="element my-4">
-        <h3><?php echo __('Tags'); ?></h3>
-        <div class="element-text"><?php echo tag_string('item'); ?></div>
-    </div>
-  </div>
 
-  <div class="col-sm-12 border-bottom">
-      <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-  </div>
-    <?php endif;?>
+
     <div class="col-sm-12 border-bottom">
       <div class="advanced-meta" id="advanced-metadata">
         <div class="advanced-meta-header">
