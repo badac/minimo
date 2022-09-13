@@ -325,10 +325,23 @@ h6 {
 }
 
 .navbar-dark{
-  #submit_search{
+    .dropdown-toggle{
+        color: rgba(255, 255, 255, 0.7);
+        }
+        .dropdown-menu{
+        .nav-link{
+            color: $black;
+            &:hover{
+            color: rgba(0,0,0,0.7);
+            }
+        }
+    }
+  .form-control, 
+  .btn{
     border-color: $white;
     color: $white;
   }
+
   .logos{
     a{
       svg{
@@ -344,7 +357,15 @@ h6 {
 }
 
 .navbar-light{
-  #submit_search{
+/*   #submit_search{
+    border-color: $black;
+    color: $black;
+  } */
+  .dropdown-toggle{
+    color: $black;
+  }
+  .form-control,
+  .btn{
     border-color: $black;
     color: $black;
   }

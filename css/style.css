@@ -13241,7 +13241,48 @@ h6 {
 .logos svg {
   width: 100%; }
 
-.navbar-dark #submit_search {
+.navbar-dark .dropdown-toggle {
+  color: rgba(255, 255, 255, 0.7); }
+
+.navbar-dark .dropdown-menu .nav-link {
+  color: #000; }
+  .navbar-dark .dropdown-menu .nav-link:hover {
+    color: rgba(0, 0, 0, 0.7); }
+
+.navbar-dark .form-control,
+.navbar-dark .btn,
+.navbar-dark .browse .secondary-nav li,
+.browse .secondary-nav .navbar-dark li,
+.navbar-dark .browse #secondary-nav li,
+.browse #secondary-nav .navbar-dark li,
+.navbar-dark .tags .secondary-nav li,
+.tags .secondary-nav .navbar-dark li,
+.navbar-dark .tags #secondary-nav li,
+.tags #secondary-nav .navbar-dark li,
+.navbar-dark .items .secondary-nav li,
+.items .secondary-nav .navbar-dark li,
+.navbar-dark .items #secondary-nav li,
+.items #secondary-nav .navbar-dark li,
+.navbar-dark .pagination .pagination_next a,
+.pagination .pagination_next .navbar-dark a,
+.navbar-dark .pagination .pagination_previous a,
+.pagination .pagination_previous .navbar-dark a,
+.navbar-dark .pagination .previous-page a,
+.pagination .previous-page .navbar-dark a,
+.navbar-dark .pagination .next-page a,
+.pagination .next-page .navbar-dark a,
+.navbar-dark #sort-links li a,
+#sort-links li .navbar-dark a,
+.navbar-dark .show #output-format-list li a,
+.show #output-format-list li .navbar-dark a,
+.navbar-dark #exhibit-pages.full #secondary-nav ul li a,
+#exhibit-pages.full #secondary-nav ul li .navbar-dark a,
+.navbar-dark #exhibit-pages.full #secondary-nav > li:nth-child(3) a,
+#exhibit-pages.full #secondary-nav > li:nth-child(3) .navbar-dark a,
+.navbar-dark #exhibit-pages.full #secondary-nav > li:nth-child(4) a,
+#exhibit-pages.full #secondary-nav > li:nth-child(4) .navbar-dark a,
+.navbar-dark #exhibit-page-navigation a,
+#exhibit-page-navigation .navbar-dark a {
   border-color: #fff;
   color: #fff; }
 
@@ -13250,14 +13291,53 @@ h6 {
   .navbar-dark .logos a svg path, .navbar-dark .logos a svg polygon {
     fill: currentColor; }
 
-.navbar-light #submit_search {
-  border-color: #000;
-  color: #000; }
-
-.navbar-light .logos a svg {
-  color: #000; }
-  .navbar-light .logos a svg path, .navbar-light .logos a svg polygon {
-    fill: currentColor; }
+.navbar-light {
+  /*   #submit_search{
+    border-color: $black;
+    color: $black;
+  } */ }
+  .navbar-light .dropdown-toggle {
+    color: #000; }
+  .navbar-light .form-control,
+  .navbar-light .btn,
+  .navbar-light .browse .secondary-nav li,
+  .browse .secondary-nav .navbar-light li,
+  .navbar-light .browse #secondary-nav li,
+  .browse #secondary-nav .navbar-light li,
+  .navbar-light .tags .secondary-nav li,
+  .tags .secondary-nav .navbar-light li,
+  .navbar-light .tags #secondary-nav li,
+  .tags #secondary-nav .navbar-light li,
+  .navbar-light .items .secondary-nav li,
+  .items .secondary-nav .navbar-light li,
+  .navbar-light .items #secondary-nav li,
+  .items #secondary-nav .navbar-light li,
+  .navbar-light .pagination .pagination_next a,
+  .pagination .pagination_next .navbar-light a,
+  .navbar-light .pagination .pagination_previous a,
+  .pagination .pagination_previous .navbar-light a,
+  .navbar-light .pagination .previous-page a,
+  .pagination .previous-page .navbar-light a,
+  .navbar-light .pagination .next-page a,
+  .pagination .next-page .navbar-light a,
+  .navbar-light #sort-links li a,
+  #sort-links li .navbar-light a,
+  .navbar-light .show #output-format-list li a,
+  .show #output-format-list li .navbar-light a,
+  .navbar-light #exhibit-pages.full #secondary-nav ul li a,
+  #exhibit-pages.full #secondary-nav ul li .navbar-light a,
+  .navbar-light #exhibit-pages.full #secondary-nav > li:nth-child(3) a,
+  #exhibit-pages.full #secondary-nav > li:nth-child(3) .navbar-light a,
+  .navbar-light #exhibit-pages.full #secondary-nav > li:nth-child(4) a,
+  #exhibit-pages.full #secondary-nav > li:nth-child(4) .navbar-light a,
+  .navbar-light #exhibit-page-navigation a,
+  #exhibit-page-navigation .navbar-light a {
+    border-color: #000;
+    color: #000; }
+  .navbar-light .logos a svg {
+    color: #000; }
+    .navbar-light .logos a svg path, .navbar-light .logos a svg polygon {
+      fill: currentColor; }
 
 /*
 .st0{display:none;}

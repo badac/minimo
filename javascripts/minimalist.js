@@ -34,7 +34,7 @@ if (jQuery) {
             $(window).on("scroll", function() {
                 //if($(window).scrollTop() && transparent !== undefined ) {
                 if($(window).scrollTop() ) {
-                  console.log('no top');
+                  //console.log('no top');
                   $('.navbar').removeClass('bg-transparent');
                   $('.navbar').removeClass('navbar-dark');
 
@@ -42,7 +42,7 @@ if (jQuery) {
 
                 }
                 else {
-                  console.log('top');
+                  //console.log('top');
                   $('.navbar').removeClass('bg-light');
                   $('.navbar').removeClass('navbar-light');
                   $('.navbar').addClass('bg-transparent');
@@ -51,7 +51,7 @@ if (jQuery) {
                   }else if(theme === "light"){
                     $('.navbar').addClass('navbar-light');
                   }
-                }
+                } 
             });
           }
 
