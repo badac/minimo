@@ -66,9 +66,10 @@
           <!-- carousel thumbnails -->
           <?php if (sizeof($files) > 1): ?>
           <div class="col-sm-12">
-              <ol class="carousel-indicators">
+              <ol class="carousel-indicators row justify-content-start">
               <?php $clase = "" ?>
               <?php foreach ($files as $index=>$file): ?>
+                <div class="col-md-1 col-xs-4">
                   <?php
                   if ($index == 0):
                       $clase = "active";
@@ -77,6 +78,7 @@
                   <li data-target="#files-carousel" data-slide-to="<?php echo $index; ?>" class="<?php echo $clase; ?>">
                     <?php echo file_image('square_thumbnail', array('class' => 'thumbnail'), $file); ?>
                   </li>
+                  </div>
               <?php endforeach; ?>
               </ol>
           </div>
