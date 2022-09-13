@@ -2,8 +2,9 @@
 $pageTitle = __('Browse Items');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'items tags'));
 ?>
-<div class="col-sm-12 my-4">
-    <h1><?php echo $pageTitle; ?></h1>
+<div class="row">
+    <div class="col-sm-12">
+    <h1 class="my-5"><?php echo $pageTitle; ?></h1>
 
     <nav class="navigation items-nav secondary-nav">
         <?php echo public_nav_items(); ?>
@@ -11,5 +12,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items tags'));
 
     <?php echo tag_cloud($tags, 'items/browse'); ?>
 
-    <?php echo foot(); ?>
+    <?php echo foot(); ?>       
+    </div>
+
 </div>
