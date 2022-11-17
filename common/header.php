@@ -72,22 +72,29 @@
                 </div>
                 <!-- logo partial -->
                 <div class="col-sm-12 col-md-4 logos">
-                  <div class="row">
-                    <div class="col-4">
+                  <div class="row d-flex align-items-center">
+                    <div class="col-3">
+                      <a href="https://www.banrepcultural.org/" target="_blank">
+                        <?php
+                          echo $this->partial('common/logo-brc.svg');
+                         ?>
+                      </a>
+                    </div>
+                    <div class="col-3">
                       <a href="https://bibliotecanacional.gov.co/" target="_blank">
                         <?php
                           echo $this->partial('common/logo-bnc.svg');
                          ?>
                       </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                       <a href="https://badac.uniandes.edu.co" target="_blank">
                         <?php
                           echo $this->partial('common/logo-badac.svg');
                          ?>
                       </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                       <a href="https://uniandes.edu.co" target="_blank">
                         <?php
                           echo $this->partial('common/logo-uniandes.svg');
