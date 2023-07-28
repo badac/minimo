@@ -1054,7 +1054,7 @@ body.files .item-file {
     font-style: italic;
     a{
         //@include link-button;
-        @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary)
+        @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
         display: initial;
     }
 }
