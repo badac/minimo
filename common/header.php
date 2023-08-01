@@ -124,7 +124,6 @@
                       <?php endif; ?>
                   </div>
                   <div class="col-sm-12 col-md-6">
-                        <h5>Facets</h5>
                         <?php
                          echo get_specific_plugin_hook_output('Facets', 'public_facets', array('view' => $this));
                         ?>
@@ -146,4 +145,3 @@
         <article id="content" role="main" tabindex="-1" class="container">
 
             <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
-            <?php fire_plugin_hook('public_facets', array('view'=>$this)); ?>
