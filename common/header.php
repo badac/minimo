@@ -108,7 +108,7 @@
                 <div class="row collapse navbar-collapse justify-content-start" id="navbarSupportedContent" >
 
 
-                  <div class="col-sm-12 col-md-8">
+                  <div class="col-sm-12 col-md-6">
                       <?php
                         $partial = array('common/menu-partial.phtml', 'default');
                         $nav = public_nav_main();
@@ -116,18 +116,21 @@
                         echo $nav->render();
                       ?>
                   </div>
-                  <div class="col-sm-8 col-md-4 d-flex justify-content-md-end justify-content-sm-start">
+                  <div class="col-sm-8 col-md-6 d-flex justify-content-md-end justify-content-sm-start">
                       <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
                       <?php echo navSearchForm(array('show_advanced' => true)); ?>
                       <?php else: ?>
                         <?php echo navSearchForm(); ?>
                       <?php endif; ?>
                   </div>
+                  <div class="col-sm-12 col-md-6">
+                        <h5>Facets</h5>
+                        <?php
+                         echo get_specific_plugin_hook_output('Facets', 'public_facets', array('view' => $this));
+                        ?>
+
+                  </div>
                 </div>
-
-
-
-
 
             </div>
 
@@ -143,3 +146,4 @@
         <article id="content" role="main" tabindex="-1" class="container">
 
             <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
+            <?php fire_plugin_hook('public_facets', array('view'=>$this)); ?>
