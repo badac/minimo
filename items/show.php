@@ -20,11 +20,11 @@
   <div class="col-sm-12">
     <h1 class="my-5 text-center"><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
   </div>
-  <!-- end item title -->
+  <!-- end item titl  e -->
 
   <!-- Item Viewer --->
   <?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>
-  <div class="col-sm-12 item-viewer">
+  <div id="item-viewer" class="col-sm-12 item-viewer">
     <!-- File Carousel -->
     <div class="row-col">
     <div id="files-carousel" class="carousel slide" data-ride="carousel" data-interval="0">
@@ -37,23 +37,31 @@
           }
         ?>
         <div class="carousel-item <?php echo $active; ?>">
-          <a href="#" data-toggle="modal" data-target="#file-modal-<?php echo $index ?>">
-            <img class="img-fluid" src="<?php echo file_display_url($file); ?>" alt="">
-          </a>
-          <div class="w-100 viewer-options ">
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a href="<?php echo file_display_url($file); ?>" download>
-                  <i class="fa fa-download" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" data-toggle="modal" data-target="#file-modal-<?php echo $index ?>" >
-                  <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
+          <div class="row">
+            <div class="col-sm-12">
+              <a href="#" data-toggle="modal" data-target="#file-modal-<?php echo $index ?>">
+                <img class="img-fluid img-preview" src="<?php echo file_display_url($file); ?>" alt="">
+              </a>
+            </div>
+            <div class="col-sm-12">
+              <div class="w-100 viewer-options ">
+                <ul class="nav justify-content-end">
+                  <li class="nav-item">
+                    <a href="<?php echo file_display_url($file,"fullsize"); ?>" download>
+                      <i class="fa fa-download" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" data-toggle="modal" data-target="#file-modal-<?php echo $index ?>" >
+                      <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+            </div>
           </div>
+
+
         </div>
 
         <?php endforeach; ?>

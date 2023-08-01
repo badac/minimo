@@ -15859,47 +15859,13 @@ body {
   margin: 0;
 }
 
-/*
-.element-set{
-  dl{
-
-    dt{
-    //margin: 0;
-    width: 30%;
-    clear: left;
-    float: left;
-    overflow: hidden;
-    line-height: $size-3;
-    //text-align: right;
-    //font-family: 'raleway-semibold';
-    padding-right: 3em;
-    }
-    dd{
-      //margin: 0;
-      width: 70%;
-      float:left;
-    }
-  }
-}
-*/
-/*
-.element-set,
-.item,
-.element,
-.collection,
-.exhibit,
-.hTagcloud {
-    margin:1em 0;
-    overflow: hidden;
-    clear:both;
-}
-*/
 #featured-item,
 #featured-collection,
 #featured-exhibit,
 #recent-items {
   overflow: hidden;
 }
+
 #skipnav {
   border: 0;
   clip: rect(0, 0, 0, 0);

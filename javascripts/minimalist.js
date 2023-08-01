@@ -51,29 +51,50 @@ if (jQuery) {
                   }else if(theme === "light"){
                     $('.navbar').addClass('navbar-light');
                   }
-                } 
+                }
             });
           }
-
 
           const navbar_observe = new ResizeObserver(entries=>{
             let navbar = entries[0];
             let rect = navbar.contentRect;
 
-            let height = rect.height + 30;
+            let navbar_height = rect.height
+            let top = navbar_height + 30;
             let content = $('#content');
-            padTop(content,height);
-            console.log('resize');
+            padTop(content,top);
           })
+
           navbar_observe.observe(document.querySelector('.navbar'));
           //inicializa tooltips
           $('[data-toggle="tooltip"]').tooltip();
+          //resize in window resize
+          $(window).on('resize',function(){
+            imgScale();
+
+          });
+          //resize on slide
+          $('#files-carousel').on('slid.bs.carousel', function () {
+            imgScale(); 
+          })
+          imgScale(); 
         });
+
+
     }(jQuery));
 }
 
-
-
 function padTop(el, padding){
   el.css("padding-top", padding);
+}
+
+function imgScale(){
+  //reescalar imagen en visor
+  if($("#item-viewer").length){
+    let navbar_height = $('.navbar').outerHeight();
+    let margin = navbar_height * 0.3;
+    let viewer_height = window.innerHeight - (navbar_height + margin);
+    let img = $('.carousel-item.active .img-preview');
+    img.css("height", viewer_height);
+  }
 }

@@ -105,54 +105,12 @@ body {
 
 }
 
-
-/*
-.element-set{
-  dl{
-
-    dt{
-    //margin: 0;
-    width: 30%;
-    clear: left;
-    float: left;
-    overflow: hidden;
-    line-height: $size-3;
-    //text-align: right;
-    //font-family: 'raleway-semibold';
-    padding-right: 3em;
-    }
-    dd{
-      //margin: 0;
-      width: 70%;
-      float:left;
-    }
-  }
-}
-*/
-/*
-.element-set,
-.item,
-.element,
-.collection,
-.exhibit,
-.hTagcloud {
-    margin:1em 0;
-    overflow: hidden;
-    clear:both;
-}
-*/
-
 #featured-item,
 #featured-collection,
 #featured-exhibit,
 #recent-items {
     overflow: hidden;
     //margin:1em 0 0;
-    h2,
-    h3{
-
-    }
-
 }
 
 #skipnav {
@@ -897,6 +855,7 @@ th {
         }
       }
     }
+
     .disclaimer{
         font-size: $font-size-sm * .9;
         background-color: $gray-300;
