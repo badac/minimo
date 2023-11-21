@@ -29,9 +29,12 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 </div>
 
 <div class="row my-5">
-  <div class="col-sm-12">
+  <div class="col">
     <?php echo item_search_filters(); ?>
     <?php echo pagination_links(); ?>
+  </div>
+  <div class="col">
+    <?php echo get_specific_plugin_hook_output('Facets','public_items_browse',array('view'=>$this)); ?>
   </div>
 </div>
 <div class="row">
@@ -39,7 +42,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
   <div class="item hentry col col-sm-1 col-md-4 my-4">
     <div class="card">
       <?php if (metadata('item', 'has files')): ?>
-          <?php echo link_to_item(item_image('square_thumbnail', array('class' => 'img-fluid card-img-top'), 0, $item)); ?>
+          <?php echo link_to_item(item_image('thumbnail', array('class' => 'img-fluid card-img-top'), 0, $item)); ?>
       <?php endif; ?>
       <div class="card-body">
           <h3 class="card-title"><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class' => 'permalink')); ?></h3>
