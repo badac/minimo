@@ -16005,10 +16005,10 @@ h6 {
   white-space: normal;
 }
 
-.navbar-nav .nav-link {
+.navbar-nav .nav-link, .navbar-nav .dropdown {
   font-size: 1.2rem;
   text-transform: uppercase;
-  padding-left: 0;
+  padding: 0.5rem 1rem;
 }
 
 .navbar-dark, .navbar-light {
@@ -16152,7 +16152,7 @@ h6 {
 .secondary-nav .navbar-nav li {
   margin-right: 0.8em;
 }
-.secondary-nav .navbar-nav li a.nav-link {
+.secondary-nav .navbar-nav li a.nav-link, .secondary-nav .navbar-nav li .dropdown-toggle {
   font-size: 1em;
   text-transform: none;
   padding: 0;
@@ -17188,6 +17188,35 @@ footer {
   background-color: white;
   -webkit-transition: background-color 1s; /* Safari */
   transition: background-color 1s;
+}
+
+/* Facets container */
+#facets-container {
+  background: transparent;
+  color: black;
+}
+#facets-container button, #facets-container #facets-body {
+  border: 1px solid black;
+  background: transparent;
+  color: black;
+}
+#facets-container form [id^=facets-field] {
+  display: flex;
+}
+#facets-container form [id^=facets-field] label {
+  width: 30%;
+}
+#facets-container form [id^=facets-field] .select-arrow, #facets-container form [id^=facets-field] .select-cross {
+  border: 1px solid black;
+  margin-left: 1rem;
+  padding-right: 1rem;
+}
+#facets-container form [id^=facets-field] .select-arrow select, #facets-container form [id^=facets-field] .select-cross select {
+  font-size: 100%;
+}
+#facets-container form [id^=facets-field] .facet-selected {
+  color: black;
+  background-color: transparent !important;
 }
 
 /* -------------------------------------------------------------------------*/

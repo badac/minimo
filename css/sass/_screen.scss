@@ -262,10 +262,10 @@ h6 {
 
 
 .navbar-nav{
-  .nav-link{
+  .nav-link, .dropdown{
     font-size: $spacer * 1.2;
     text-transform: uppercase;
-    padding-left: 0;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -374,7 +374,7 @@ h6 {
           margin-right:.8em;
           //display: block;
           //float:left;
-          a.nav-link{
+          a.nav-link, .dropdown-toggle{
             font-size: 1em;
             text-transform: none;
             padding: 0;
@@ -1279,4 +1279,40 @@ footer{
   background-color: white;
   -webkit-transition: background-color 1s; /* Safari */
   transition: background-color 1s;
+}
+
+
+/* Facets container */
+
+#facets-container {
+    background: transparent;
+    color: black;
+    button, #facets-body{
+        border: 1px solid black;
+        background: transparent;
+        color: black;
+    }
+    form{
+        [id^="facets-field"]{
+            display: flex;
+            label{
+                width: 30%;
+            }
+            .select-arrow, .select-cross{
+                border: 1px solid black;
+                margin-left: $spacer;
+                padding-right: $spacer;
+                select{
+
+                    font-size: 100%;
+                }
+            }
+            .facet-selected{
+                color: black;
+                background-color: transparent !important;
+            }
+        }
+
+
+    }
 }

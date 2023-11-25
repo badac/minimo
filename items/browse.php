@@ -14,15 +14,20 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 
   <?php if ($total_results > 0): ?>
   <div class="col">
-    <?php
-    $sortLinks[__('Title')] = 'Dublin Core,Title';
-    $sortLinks[__('Creator')] = 'Dublin Core,Creator';
-    $sortLinks[__('Date Added')] = 'added';
-    ?>
+    <?php if(plugin_is_active('Facets')): ?>
+      <?php echo get_specific_plugin_hook_output('Facets','public_facets',array('view'=>$this)); ?>
+    <?php else: ?>
+      <?php
+      $sortLinks[__('Title')] = 'Dublin Core,Title';
+      $sortLinks[__('Creator')] = 'Dublin Core,Creator';
+      $sortLinks[__('Date')] = 'Dublin Core, Date';
+      ?>
 
-    <div id="sort-links">
-        <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
-    </div>
+      <div id="sort-links">
+          <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
+      </div>
+    <?php endif;?>
+
   </div>
 <?php endif; ?>
 
@@ -33,9 +38,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
     <?php echo item_search_filters(); ?>
     <?php echo pagination_links(); ?>
   </div>
-  <div class="col">
-    <?php echo get_specific_plugin_hook_output('Facets','public_items_browse',array('view'=>$this)); ?>
-  </div>
+
 </div>
 <div class="row">
   <?php foreach (loop('items') as $item): ?>

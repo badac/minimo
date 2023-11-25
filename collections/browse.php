@@ -14,6 +14,10 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
   <div id="sort-links">
       <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
   </div>
+  <div class="col">
+    <?php echo get_specific_plugin_hook_output('CollectionTree','public_collections_browse',array('view'=>$this)); ?>
+  </div>
+
 </div>
 
 <div class="row">
