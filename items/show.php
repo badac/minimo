@@ -46,11 +46,7 @@
             <div class="col-sm-12">
               <div class="w-100 viewer-options ">
                 <ul class="nav justify-content-end">
-                  <li class="nav-item">
-                    <a href="<?php echo file_display_url($file,"fullsize"); ?>" download>
-                      <i class="fa fa-download" aria-hidden="true"></i>
-                    </a>
-                  </li>
+
                   <li class="nav-item">
                     <a href="#" data-toggle="modal" data-target="#file-modal-<?php echo $index ?>" >
                       <i class="fa fa-arrows-alt" aria-hidden="true"></i>
