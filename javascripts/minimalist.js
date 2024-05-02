@@ -20,6 +20,9 @@ if (jQuery) {
     (function ($) {
         "use strict";
         $(document).ready(function () {
+          //deshabilitar menú contextual :'( !
+          $(window).bind('contextmenu', false);
+
           var transparent = $(".navbar").data("transparent");
           var theme = $('.navbar').data("theme");
           var body_id = $('body').attr('id');
