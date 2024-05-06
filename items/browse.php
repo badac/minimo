@@ -1,10 +1,7 @@
 <?php
 $pageTitle = __('Browse Items');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
-?>
-<div class="row-col my-5">
-  <h1><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
-</div>
+?>  
 <div class="row my-5">
   <div class="col align-middle">
     <nav class="items-nav navigation secondary-nav">
@@ -12,15 +9,18 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
     </nav>
   </div>
 
-  <?php if ($total_results > 0): ?>
   <div class="col">
+   <h2 class="text-center"><?php echo __('%s items', $total_results); ?></h2> 
+  </div>
+
+  <?php if ($total_results > 0): ?>
     <?php
     $sortLinks[__('Title')] = 'Dublin Core,Title';
     $sortLinks[__('Creator')] = 'Dublin Core,Creator';
     $sortLinks[__('Date Added')] = 'added';
     ?>
 
-    <div id="sort-links">
+    <div class="col" id="sort-links">
         <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
     </div>
   </div>

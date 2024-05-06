@@ -2,16 +2,23 @@
 $pageTitle = __('Browse Collections');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
 ?>
-<div class="row-col my-5">
-  <h1><?php echo $pageTitle; ?> <?php echo __('(%s total)', $total_results); ?></h1>
-</div>
-<?php echo pagination_links(); ?>
+
 <div class="row my-5">
+  <div class="col align-middle">
+    <nav class="items-nav navigation secondary-nav">
+      <?php echo pagination_links(); ?>
+    </nav>
+  </div>
+  <div class="col">
+    <h2 class="text-center"><?php echo __('%s collections', $total_results); ?></h2>
+  </div>
+
   <?php
   $sortLinks[__('Title')] = 'Dublin Core,Title';
   $sortLinks[__('Date Added')] = 'added';
   ?>
-  <div id="sort-links">
+
+  <div class="col" id="sort-links">
       <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
   </div>
 </div>
