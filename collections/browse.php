@@ -23,13 +23,12 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
   </div>
 </div>
 
-<div class="row">
+<div class="card-columns">
   <?php foreach (loop('collections') as $collection): ?>
 
-  <div class="collection col-sm-1 col-md-4 my-4">
-    <div class="card">
-      <?php if ($collectionImage = record_image('collection', 'square_thumbnail', array('class'=>'img-fluid card-img-top'))): ?>
-          <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
+    <div class="card collection m-4">
+      <?php if ($collectionImage = record_image('collection', 'thumbnail', array('class'=>'img-fluid card-img-top'))): ?>
+          <?php echo link_to_collection($collectionImage, array('class' => 'permalink')); ?>
       <?php endif; ?>
       <div class="card-body">
         <div class="card-title">
@@ -56,10 +55,9 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
       </div>
     </div>
 
-  </div><!-- end class="collection" -->
 
   <?php endforeach; ?>
-</div>
+</div><!-- end class="collection" -->
 
 
 <?php echo pagination_links(); ?>
