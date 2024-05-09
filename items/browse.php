@@ -37,7 +37,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
   <?php foreach (loop('items') as $item): ?>
     <div class="item hentry card">
       <?php if (metadata('item', 'has files')): ?>
-          <?php echo link_to_item(item_image('square_thumbnail', array('class' => 'img-fluid card-img-top'), 0, $item)); ?>
+          <?php echo link_to_item(item_image(null, array('class' => 'img-fluid card-img-top'), 0, $item), array('class'=>'stretched-link')); ?>
       <?php endif; ?>
       <div class="card-body">
           <h3 class="card-title"><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class' => 'permalink')); ?></h3>

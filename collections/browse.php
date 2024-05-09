@@ -28,7 +28,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
 
     <div class="card collection m-4">
       <?php if ($collectionImage = record_image('collection', 'thumbnail', array('class'=>'img-fluid card-img-top'))): ?>
-          <?php echo link_to_collection($collectionImage, array('class' => 'permalink')); ?>
+          <?php echo link_to_collection($collectionImage, array('class' => 'permalink stretched-link'),); ?>
       <?php endif; ?>
       <div class="card-body">
         <div class="card-title">

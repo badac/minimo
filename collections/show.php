@@ -26,7 +26,7 @@ $totalItems = metadata('collection', 'total_items');
                 <?php if (metadata('item', 'has files')): ?>
                     <?php
                     echo link_to_item(
-                      item_image(null, array('alt' => $itemTitle, 'class' => 'img-fluid card-img-top'),0,$item));
+                      item_image(null, array('alt' => $itemTitle, 'class' => 'img-fluid card-img-top'),0,$item),array('class'=>'stretched-link'));
                     ?>
                 <?php endif; ?>
                 <div class="card-body">
