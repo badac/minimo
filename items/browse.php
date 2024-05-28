@@ -16,9 +16,9 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 
   <?php if ($total_results > 0): ?>
     <?php
+    $sortLinks[__('Date')] = 'Dublin Core, Date';
     $sortLinks[__('Title')] = 'Dublin Core,Title';
     $sortLinks[__('Creator')] = 'Dublin Core,Creator';
-    $sortLinks[__('Date Added')] = 'added';
     ?>
 
     <div class="col" id="sort-links">

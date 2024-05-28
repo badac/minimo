@@ -69,15 +69,17 @@ if (jQuery) {
           //inicializa tooltips
           $('[data-toggle="tooltip"]').tooltip();
           //resize in window resize
+          /*
           $(window).on('resize',function(){
             imgScale();
-
           });
+          */
           //resize on slide
           $('#files-carousel').on('slid.bs.carousel', function () {
             imgScale(); 
           })
-          imgScale(); 
+          //El escalado está dando problemas
+          //imgScale(); 
         });
 
 
