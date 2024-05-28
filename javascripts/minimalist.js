@@ -73,8 +73,9 @@ if (jQuery) {
           $(window).on('resize',function(){
             imgScale();
           });
-          */
+          */ c
           //resize on slide
+          
           $('#files-carousel').on('slid.bs.carousel', function () {
             imgScale(); 
           })
