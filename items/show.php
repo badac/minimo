@@ -13,11 +13,26 @@
 
 <div class="row">
 
+
+<div class="col-sm-12">
+<nav>
+      <ul class="item-pagination navigation mt-4">
+          <li id="previous-item" class="previous"><?php echo link_to_previous_item_show($text = null, $props = array('class' => 'btn btn-outline-primary')); ?></li>
+          <li id="next-item" class="next float-right"><?php echo link_to_next_item_show($text = null, $props = array('class' => 'btn btn-outline-primary')); ?></li>
+      </ul>
+    </nav>  
+
+</div>
+
   <!-- item title -->
-  <div class="col-sm-12">
-    <h1 class="my-5 text-center"><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
-  </div>
-  <!-- end item titl  e -->
+    <div class="col-sm-12">
+        <h1 class="my-5 text-center"><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
+      </div>  
+
+
+
+
+  <!-- end item title -->
 
   <!-- Item Viewer --->
   <?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>
