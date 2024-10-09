@@ -29,7 +29,7 @@ $totalItems = metadata('collection', 'total_items');
                 <?php if (metadata('item', 'has thumbnail')): ?>
                     <?php
                     echo link_to_item(
-                      item_image(null, array('alt' => $itemTitle, 'class' => 'img-fluid card-img-top')),
+                      item_image('thumbnail', array('alt' => $itemTitle, 'class' => 'img-fluid card-img-top')),
                         array('class' => 'image'), 'show', $item
                       );
                     ?>
