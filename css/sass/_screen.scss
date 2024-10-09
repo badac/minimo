@@ -1018,6 +1018,13 @@ body.files .item-file {
     }
 }
 
+.simple-page{
+    #content.container{
+        width: 90%;
+        min-width: 90%;
+    }
+}
+
 /* -------------------------------------------------------------------------*/
 /* Geolocation */
 
