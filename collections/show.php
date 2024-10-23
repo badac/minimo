@@ -1,10 +1,13 @@
 <?php
+
 $collectionTitle = metadata('collection', 'display_title');
+
+set_loop_records('items',array_slice($items,0,9));
+
 $totalItems = metadata('collection', 'total_items');
 ?>
 
 <?php echo head(array('title' => $collectionTitle, 'bodyclass' => 'collections show')); ?>
-
 
 <div class="row">
   <div class="col-sm-12">
