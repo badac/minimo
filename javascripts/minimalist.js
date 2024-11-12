@@ -94,7 +94,8 @@ function imgScale(){
     let navbar_height = $('.navbar').outerHeight();
     let margin = navbar_height * 0.3;
     let viewer_height = window.innerHeight - (navbar_height + margin);
-    let img = $('.carousel-item.active .img-preview');
-    img.css("height", viewer_height);
+    let viewer = $('.img-container');
+    viewer.css("height", viewer_height);
+    //img.css("width", "auto");                           
   }
 }

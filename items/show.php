@@ -49,7 +49,7 @@
         ?>
         <div class="carousel-item <?php echo $active; ?>">
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 img-container">
               <a href="#" data-toggle="modal" data-target="#file-modal-<?php echo $index ?>">
                 <img class="img-fluid img-preview" src="<?php echo file_display_url($file); ?>" alt="">
               </a>
