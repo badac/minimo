@@ -1323,3 +1323,25 @@ footer{
 
     }
 }
+
+/* -------------------------------------------------------------------------*/
+/* Item Relations */
+
+#item-relations-display-item-relations{
+    .card{
+        .card-body{
+            padding: $spacer;
+            .card-title{
+                font-weight: normal;
+                margin-bottom: 0;
+            }
+        
+            dt,dd{
+                display:inline-block;
+            }
+        }
+
+    }
+
+
+}

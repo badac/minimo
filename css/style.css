@@ -16736,6 +16736,19 @@ footer {
 }
 
 /* -------------------------------------------------------------------------*/
+/* Item Relations */
+#item-relations-display-item-relations .card .card-body {
+  padding: 1rem;
+}
+#item-relations-display-item-relations .card .card-body .card-title {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+#item-relations-display-item-relations .card .card-body dt, #item-relations-display-item-relations .card .card-body dd {
+  display: inline-block;
+}
+
+/* -------------------------------------------------------------------------*/
 /* Screen - Mobile */
 @media screen and (min-width: 40em) {
   /* -------------------------------------------------------------------------*/
