@@ -22,7 +22,11 @@ $totalItems = metadata('collection', 'total_items');
   <div class="col-sm-12">
     <div id="collection-items" class="my-4">
         <h2 class="my-5"><?php echo __('Collection Items'); ?></h2>
+
         <?php if ($totalItems > 0): ?>
+
+          <?php echo link_to_items_browse(__(plural('View item', 'View all %s items', $totalItems), $totalItems), array('collection' => metadata('collection', 'id')), array('class' => 'btn btn-outline-primary')); ?>
+
           <div class="row my-4">
           <?php foreach (loop('items') as $item): ?>
             <?php $itemTitle = metadata('item', 'display_title'); ?>
@@ -53,7 +57,7 @@ $totalItems = metadata('collection', 'total_items');
               <?php endforeach; ?>
           </div>
 
-            <?php echo link_to_items_browse(__(plural('View item', 'View all %s items', $totalItems), $totalItems), array('collection' => metadata('collection', 'id')), array('class' => 'btn btn-outline-primary')); ?>
+
         <?php else: ?>
             <p><?php echo __("There are currently no items within this collection."); ?></p>
         <?php endif; ?>
