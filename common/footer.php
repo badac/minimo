@@ -20,16 +20,8 @@
               <div class="col col-sm">
                 <ul class="nav footer-links my-5 justify-content-center">
                   <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="https://facartes.uniandes.edu.co" target="_blank">Facultad de Artes y Humanidades</a> </li>
-                  <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="https://registro.uniandes.edu.co/" target="_blank">Admisiones y registro</a> </li>
-                  <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="https://apoyofinanciero.uniandes.edu.co/index.php/es/" target="_blank">Apoyo Financiero </a> </li>
-                  <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="https://biblioteca.uniandes.edu.co/index.php?lang=es" target="_blank"> Biblioteca </a> </li>  
-                  <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="http://correo.uniandes.edu.co/" target="_blank"> Correo </a> </li>
-                  <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="https://uniandes.edu.co/egresado" target="_blank"> Egresados </a> </li>
-                  <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="https://secretariageneral.uniandes.edu.co/index.php/es/" target="_blank"> Normas </a> </li>
-
-                  <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="https://planeacion.uniandes.edu.co/" target="_blank"> Planeación </a> </li>
-                  <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="https://bloqueneon.uniandes.edu.co/" target="_blank"> Bloque Neón </a></li>
-                  <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="https://youtu.be/vDwzjcafCNg" target="_blank"> Siprae </a></li>
+                  
+                  <li><a href="https://historiadelarte.uniandes.edu.co/">Departamento de Historia del Arte</a></li>
                   
                 </ul>
               </div>
