@@ -833,7 +833,9 @@ th {
       img{
         display: block;
         margin: 0 auto;
+        //object-fit: scale-down;
       }
+      
     }
     .viewer-options{
       margin-top: 1rem;
