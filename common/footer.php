@@ -20,8 +20,8 @@
               <div class="col col-sm">
                 <ul class="nav footer-links my-5 justify-content-center">
                   <li class="nav-item m-2" > <a class="nav-link btn btn-outline-primary btn-sm" href="https://facartes.uniandes.edu.co" target="_blank">Facultad de Artes y Humanidades</a> </li>
-                  
-                  <li><a href="https://historiadelarte.uniandes.edu.co/">Departamento de Historia del Arte</a></li>
+
+                  <li class="nav-item m-2"><a class="nav-link btn btn-outline-primary btn-sm" href="https://historiadelarte.uniandes.edu.co/">Departamento de Historia del Arte</a></li>
                   
                 </ul>
               </div>
