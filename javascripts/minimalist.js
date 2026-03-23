@@ -68,16 +68,16 @@ if (jQuery) {
           navbar_observe.observe(document.querySelector('.navbar'));
           //inicializa tooltips
           $('[data-toggle="tooltip"]').tooltip();
-          //resize in window resize
-          $(window).on('resize',function(){
-            imgScale();
-
-          });
-          //resize on slide
-          $('#files-carousel').on('slid.bs.carousel', function () {
-            imgScale(); 
-          })
-          imgScale(); 
+          
+          // Update CSS custom property for navbar height
+          function updateNavbarHeight() {
+            const navbarHeight = $('.navbar').outerHeight();
+            document.documentElement.style.setProperty('--navbar-height', navbarHeight + 'px');
+          }
+          
+          // Update on load and resize
+          updateNavbarHeight();
+          $(window).on('resize', updateNavbarHeight); 
         });
 
 
@@ -88,29 +88,5 @@ function padTop(el, padding){
   el.css("padding-top", padding);
 }
 
-function imgScale(){
-  //reescalar imagen en visor
-  if($("#item-viewer").length){
-    let navbar_height = $('.navbar').outerHeight();
-    let margin = navbar_height * 0.3;
-    let viewer_height = window.innerHeight - (navbar_height + margin);
-    let viewer_width = $('.item-viewer').outerWidth();
-
-    if(viewer_width >= viewer_height){
-      //console.log("horizontal");
-      let viewer = $('.img-container');
-      //viewer.css("height", viewer_height);
-      //img.css("width", "auto");
-      $('.img-preview').css("height",viewer_height);
-      $('.img-preview').css("width", "auto")  
-    }else{
-      //console.log("vertical");
-      $('.img-preview').css("height","auto");
-      $('.img-preview').css("width", "100%");
-    }
-    //let viewer = $('.img-container');
-    //viewer.css("height", viewer_height);
-    //img.css("width", "auto");
-    //$('.img-preview').css("object-fit": "scale-down");                 
-  }
-}
+// imgScale() function removed - now handled by CSS using object-fit: contain
+// The responsive behavior is automatic via CSS, no JavaScript needed

@@ -826,14 +826,36 @@ th {
   .item-viewer{
     padding: 1rem;
     background-color: $gray-200;
+    
+    .carousel-inner{
+      // Use CSS custom property for dynamic height calculation
+      min-height: calc(100vh - var(--navbar-height, 80px) - 200px);
+    }
+    
     .carousel-item{
-      img{
-        display: block;
-        margin: 0 auto;
-        //object-fit: scale-down;
+      // Preserve Bootstrap's positioning while adding centering
+      min-height: inherit;
+      
+      .img-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: calc(100vh - var(--navbar-height, 80px) - 200px);
       }
       
+      img.img-preview{
+        display: block;
+        // This ensures the image scales to fit without cropping or deforming
+        object-fit: contain;
+        max-width: 100%;
+        max-height: calc(100vh - var(--navbar-height, 80px) - 200px);
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+      }
     }
+    
     .viewer-options{
       margin-top: 1rem;
       .nav-item{
@@ -841,6 +863,7 @@ th {
         margin-right: $spacer;
       }
     }
+    
     .carousel-indicators{
       position: relative;
       z-index: auto;
@@ -848,9 +871,16 @@ th {
       li{
         width: 50px;
         height: auto;
+        cursor: pointer;
         img{
           display: block;
           max-width: 50px;
+          opacity: 0.5;
+          transition: opacity 0.3s;
+        }
+        &.active img,
+        &:hover img{
+          opacity: 1;
         }
       }
     }
