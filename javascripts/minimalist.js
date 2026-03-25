@@ -68,19 +68,16 @@ if (jQuery) {
           navbar_observe.observe(document.querySelector('.navbar'));
           //inicializa tooltips
           $('[data-toggle="tooltip"]').tooltip();
-          //resize in window resize
-          /*
-          $(window).on('resize',function(){
-            imgScale();
-          });
-          */ 
-          //resize on slide
           
-          $('#files-carousel').on('slid.bs.carousel', function () {
-            imgScale(); 
-          })
-          //El escalado está dando problemas
-          //imgScale(); 
+          // Update CSS custom property for navbar height
+          function updateNavbarHeight() {
+            const navbarHeight = $('.navbar').outerHeight();
+            document.documentElement.style.setProperty('--navbar-height', navbarHeight + 'px');
+          }
+          
+          // Update on load and resize
+          updateNavbarHeight();
+          $(window).on('resize', updateNavbarHeight); 
         });
 
 
@@ -91,13 +88,5 @@ function padTop(el, padding){
   el.css("padding-top", padding);
 }
 
-function imgScale(){
-  //reescalar imagen en visor
-  if($("#item-viewer").length){
-    let navbar_height = $('.navbar').outerHeight();
-    let margin = navbar_height * 0.3;
-    let viewer_height = window.innerHeight - (navbar_height + margin);
-    let img = $('.carousel-item.active .img-preview');
-    img.css("height", viewer_height);
-  } 
-}
+// imgScale() function removed - now handled by CSS using object-fit: contain
+// The responsive behavior is automatic via CSS, no JavaScript needed

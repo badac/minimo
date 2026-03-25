@@ -34,6 +34,17 @@
 
   <!-- end item title -->
 
+<!-- Navegación superioor -->
+  <div class="col-sm-12">
+    <nav>
+      <ul class="item-pagination navigation mt-4">
+          <li id="button_previous-item" class="previous"><?php echo link_to_previous_item_show($text = null, $props = array('class' => 'btn btn-outline-primary')); ?></li>
+          <li id="button_next-item" class="next float-right"><?php echo link_to_next_item_show($text = null, $props = array('class' => 'btn btn-outline-primary')); ?></li>
+      </ul>
+    </nav>
+  </div>
+<!-- End navegación superior -->
+
   <!-- Item Viewer --->
   <?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>
   <div id="item-viewer" class="col-sm-12 item-viewer">
@@ -50,9 +61,9 @@
         ?>
         <div class="carousel-item <?php echo $active; ?>">
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 img-container">
               <a href="#" data-toggle="modal" data-target="#file-modal-<?php echo $index ?>">
-                <img class="img-fluid img-preview" src="<?php echo file_display_url($file); ?>" alt="">
+                <img class="img-preview" src="<?php echo file_display_url($file); ?>" alt="">
               </a>
             </div>
             <div class="col-sm-12">
@@ -112,6 +123,9 @@
       <?php echo all_element_texts('item'); ?>
     </div>
   </div>
+
+
+
     <!-- The following returns all of the files associated with an item. -->
     <?php if ((get_theme_option('Item FileGallery') == 1) && metadata('item', 'has files')): ?>
     <div class="col-sm-12">
@@ -130,6 +144,7 @@
         <div class="element-text"><?php echo tag_string('item'); ?></div>
     </div>
   </div>
+  <?php endif;?>
 
   <div class="col-sm-12">
       <h3>Nota de derechos</h3>
@@ -138,10 +153,6 @@
       </p>
     </div>
 
-  <div class="col-sm-12 border-bottom">
-      <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-  </div>
-    <?php endif;?>
 
     <!-- If the item belongs to a collection, the following creates a link to that collection. -->
   <?php if (metadata('item', 'Collection Name')): ?>
@@ -183,7 +194,7 @@
 
   <div class="col-sm-12">
     <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-  </div>
+  </div>  
 
   <div class="col-sm-12">
     <nav>

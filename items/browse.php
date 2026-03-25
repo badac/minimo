@@ -11,33 +11,35 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
   </div>
 
   <div class="col">
-   <h2 class="text-center"><?php echo __('%s items', $total_results); ?></h2> 
-  </div>
+    <?php if(plugin_is_active('Facets')): ?>
+      <?php echo get_specific_plugin_hook_output('Facets','public_facets',array('view'=>$this)); ?>
+    <?php else: ?>
+      <?php
+      $sortLinks[__('Title')] = 'Dublin Core,Title';
+      $sortLinks[__('Creator')] = 'Dublin Core,Creator';
+      $sortLinks[__('Date Created')] = 'Dublin Core, Date';
+      ?>
 
-  <?php if ($total_results > 0): ?>
-    <?php
-    $sortLinks[__('Date')] = 'Dublin Core, Date';
-    $sortLinks[__('Title')] = 'Dublin Core,Title';
-    $sortLinks[__('Creator')] = 'Dublin Core,Creator';
-    ?>
+      <div id="sort-links">
+          <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
+      </div>
+    <?php endif;?>
 
-    <div class="col" id="sort-links">
-        <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
-    </div>
   </div>
 <?php endif; ?>
 
 <div class="row my-5">
-  <div class="col-sm-12">
+  <div class="col">
     <?php echo item_search_filters(); ?>
     <?php echo pagination_links(); ?>
   </div>
+
 </div>
 <div class="card-columns">
   <?php foreach (loop('items') as $item): ?>
     <div class="item hentry card">
       <?php if (metadata('item', 'has files')): ?>
-          <?php echo link_to_item(item_image('square_thumbnail', array('class' => 'img-fluid card-img-top'), 0, $item)); ?>
+          <?php echo link_to_item(item_image('thumbnail', array('class' => 'img-fluid card-img-top'), 0, $item)); ?>
       <?php endif; ?>
       <div class="card-body">
           <h3 class="card-title"><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class' => 'permalink')); ?></h3>

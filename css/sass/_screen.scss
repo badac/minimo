@@ -237,9 +237,6 @@ h6 {
 /* -------------------------------------------------------------------------*/
 /* Links */
 
-
-
-
 /* -------------------------------------------------------------------------*/
 /* U */
 /* -------------------------------------------------------------------------*/
@@ -262,10 +259,10 @@ h6 {
 
 
 .navbar-nav{
-  .nav-link{
+  .nav-link, .dropdown{
     font-size: $spacer * 1.2;
     text-transform: uppercase;
-    padding-left: 0;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -374,7 +371,7 @@ h6 {
           margin-right:.8em;
           //display: block;
           //float:left;
-          a.nav-link{
+          a.nav-link, .dropdown-toggle{
             font-size: 1em;
             text-transform: none;
             padding: 0;
@@ -829,12 +826,36 @@ th {
   .item-viewer{
     padding: 1rem;
     background-color: $gray-200;
+    
+    .carousel-inner{
+      // Use CSS custom property for dynamic height calculation
+      min-height: calc(100vh - var(--navbar-height, 80px) - 200px);
+    }
+    
     .carousel-item{
-      img{
+      // Preserve Bootstrap's positioning while adding centering
+      min-height: inherit;
+      
+      .img-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: calc(100vh - var(--navbar-height, 80px) - 200px);
+      }
+      
+      img.img-preview{
         display: block;
+        // This ensures the image scales to fit without cropping or deforming
+        object-fit: contain;
+        max-width: 100%;
+        max-height: calc(100vh - var(--navbar-height, 80px) - 200px);
+        width: auto;
+        height: auto;
         margin: 0 auto;
       }
     }
+    
     .viewer-options{
       margin-top: 1rem;
       .nav-item{
@@ -842,6 +863,7 @@ th {
         margin-right: $spacer;
       }
     }
+    
     .carousel-indicators{
       position: relative;
       z-index: auto;
@@ -849,9 +871,16 @@ th {
       li{
         width: 50px;
         height: auto;
+        cursor: pointer;
         img{
           display: block;
           max-width: 50px;
+          opacity: 0.5;
+          transition: opacity 0.3s;
+        }
+        &.active img,
+        &:hover img{
+          opacity: 1;
         }
       }
     }
@@ -1015,6 +1044,13 @@ body.files .item-file {
         //@include link-button;
         @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
         display: initial;
+    }
+}
+
+.simple-page{
+    #content.container{
+        width: 90%;
+        min-width: 90%;
     }
 }
 
@@ -1279,4 +1315,62 @@ footer{
   background-color: white;
   -webkit-transition: background-color 1s; /* Safari */
   transition: background-color 1s;
+}
+
+
+/* Facets container */
+
+#facets-container {
+    background: transparent;
+    color: black;
+    button, #facets-body{
+        border: 1px solid black;
+        background: transparent;
+        color: black;
+    }
+    form{
+        [id^="facets-field"]{
+            display: flex;
+            label{
+                width: 30%;
+            }
+            .select-arrow, .select-cross{
+                border: 1px solid black;
+                margin-left: $spacer;
+                padding-right: $spacer;
+                select{
+
+                    font-size: 100%;
+                }
+            }
+            .facet-selected{
+                color: black;
+                background-color: transparent !important;
+            }
+        }
+
+
+    }
+}
+
+/* -------------------------------------------------------------------------*/
+/* Item Relations */
+
+#item-relations-display-item-relations{
+    .card{
+        .card-body{
+            padding: $spacer;
+            .card-title{
+                font-weight: normal;
+                margin-bottom: 0;
+            }
+        
+            dt,dd{
+                display:inline-block;
+            }
+        }
+
+    }
+
+
 }

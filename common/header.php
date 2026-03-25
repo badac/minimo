@@ -99,7 +99,7 @@
                 <!-- END NAVBAR BARRA SUPERIOR -->
 
               <!-- NAVBAR BARRA INFERIOR -->
-                <div class="col-sm-12">
+            <div class="col-sm-12">
 
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -138,7 +138,10 @@
         </nav>
         </header>
         <?php if(get_theme_option('hero') && is_current_url('/') ): ?>
-        <div class="jumbotron-fluid hero" style="background-image:url(<?php echo hero_image_path(); ?>);">
+        <div class="jumbotron-fluid hero d-flex" style="background-image:url(<?php echo hero_image_path(); ?>);">
+        <div class="col-sm-12 align-self-end pb-3 text-light">
+            Fotografía de portada: Jorge González
+          </div>
         </div>
       <?php endif; ?>
 

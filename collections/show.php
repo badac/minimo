@@ -1,12 +1,15 @@
 <?php
+
 $collectionTitle = metadata('collection', 'display_title');
+
+set_loop_records('items',array_slice($items,0,9));
+
 $totalItems = metadata('collection', 'total_items');
 ?>
 
 <?php echo head(array('title' => $collectionTitle, 'bodyclass' => 'collections show')); ?>
 
-
-<div class="row my-5">
+<div class="row">
   <div class="col-sm-12">
 
     <h1 class="my-5 text-center" ><?php echo $collectionTitle; ?></h1>
@@ -18,6 +21,7 @@ $totalItems = metadata('collection', 'total_items');
   </div>
   <div id="collection-items" class="col-sm-12 my-4">
         <h2 class="my-5"><?php echo __('Collection Items'); ?></h2>
+
         <?php if ($totalItems > 0): ?>
           <div class="card-columns">
           <?php foreach (loop('items') as $item): ?>

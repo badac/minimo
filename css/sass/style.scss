@@ -3,7 +3,7 @@
 @import "normalize";
 //@import "susy";
 @import "node_modules/bootstrap/scss/functions";
-//@import "node_modules/bootstrap/scss/variables";
+//@use "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 @import "project-variables";
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -20,14 +20,10 @@
 
 /* -------------------------------------------------------------------------*/
 /* Screen - Mobile */
-@media screen and (min-width: 40em) {
-    @import "screen_40em_min";
-}
+@import "screen_40em_min";
 /* -------------------------------------------------------------------------*/
 /* Print */
-@media print {
-    @import "print";
-}
+@import "print";
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
 
