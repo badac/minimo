@@ -3,29 +3,35 @@ $pageTitle = __('Browse Collections');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
 ?>
 
-<div class="row my-5">
-  <div class="col align-middle">
+<div class="row my-5 d-flex justify-content-center">
+
+  <div class="row-col ">
+    <h2 class="text-center"><?php echo __('%s collections', $total_results); ?></h2>
+  </div>
+
+  <div class="row-col align-middle">
     <nav class="items-nav navigation secondary-nav">
       <?php echo pagination_links(); ?>
     </nav>
   </div>
-  <div class="col">
-    <h2 class="text-center"><?php echo __('%s collections', $total_results); ?></h2>
-  </div>
+
+</div>
 
   <?php
   $sortLinks[__('Title')] = 'Dublin Core,Title';
   $sortLinks[__('Date Added')] = 'added';
   ?>
+  <div class="row my-5 d-flex justify-content-end">
 
-  <div class="col" id="sort-links">
-      <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
-  </div>
-  <div class="col">
-    <?php echo get_specific_plugin_hook_output('CollectionTree','public_collections_browse',array('view'=>$this)); ?>
+    <div class="row-col" id="sort-links">
+          <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
+    </div>
+    <div class="col">
+        <?php echo get_specific_plugin_hook_output('CollectionTree','public_collections_browse',array('view'=>$this)); ?>
+    </div>
   </div>
 
-</div>
+
 
 <div class="card-columns">
   <?php foreach (loop('collections') as $collection): ?>
