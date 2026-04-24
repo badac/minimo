@@ -16285,7 +16285,7 @@ h1 {
 
 h2 {
   font-size: 32px;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
 }
 
 h3 {

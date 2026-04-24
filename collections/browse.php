@@ -6,7 +6,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
 <div class="row my-5 d-flex justify-content-center">
 
   <div class="row-col ">
-    <h2 class="text-center"><?php echo __('%s collections', $total_results); ?></h2>
+    <h2 class="text-center"><?php echo $pageTitle; ?> <?php echo __('(%s total)', $total_results); ?></h2>
   </div>
 
   <div class="row-col align-middle">
