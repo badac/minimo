@@ -26,7 +26,6 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
     <?php endif;?>
 
   </div>
-<?php endif; ?>
 
 <div class="row my-5">
   <div class="col">
